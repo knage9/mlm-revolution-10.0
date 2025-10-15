@@ -249,7 +249,7 @@ body {
 }
 
 .opening-date-container {
-    margin-left: 20px;
+    margin-left: 0;
 }
 
 .opening-date {
@@ -382,20 +382,145 @@ body {
     .container {
         max-width: 1200px;
     }
-    
+
     .hero-section {
-        flex-direction: column;
-        gap: 40px;
+        gap: 15px;
     }
-    
-    .hero-left,
+
+    .hero-left {
+        width: 680px;
+    }
+
     .hero-right {
-        width: 100%;
+        width: 680px;
     }
-    
+
     .mascot-container {
-        width: 100%;
+        width: 680px;
+        height: 360px;
+    }
+
+    .mascot-img {
+        width: 400px;
         height: 400px;
+    }
+
+    .badges-container {
+        gap: 18px;
+    }
+
+    .badge-row {
+        gap: 18px;
+    }
+
+    .badge {
+        padding: 18px;
+        height: 105px;
+    }
+
+    .badge-outline {
+        width: 310px;
+    }
+
+    .badge-mlm {
+        width: 350px;
+    }
+
+    .badge-revolution {
+        width: 680px;
+    }
+
+    .badge-version {
+        width: 270px;
+    }
+
+    .badge-description {
+        width: 385px;
+    }
+
+    .badge-text {
+        font-size: 40px;
+    }
+
+    .badge-text-large {
+        font-size: 75px;
+    }
+
+    .badge-text-medium {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+
+    .hero-section {
+        gap: 12px;
+    }
+
+    .hero-left {
+        width: 580px;
+    }
+
+    .hero-right {
+        width: 580px;
+    }
+
+    .mascot-container {
+        width: 580px;
+        height: 320px;
+    }
+
+    .mascot-img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .badges-container {
+        gap: 15px;
+    }
+
+    .badge-row {
+        gap: 15px;
+    }
+
+    .badge {
+        padding: 15px;
+        height: 90px;
+    }
+
+    .badge-outline {
+        width: 260px;
+    }
+
+    .badge-mlm {
+        width: 290px;
+    }
+
+    .badge-revolution {
+        width: 580px;
+    }
+
+    .badge-version {
+        width: 230px;
+    }
+
+    .badge-description {
+        width: 320px;
+    }
+
+    .badge-text {
+        font-size: 35px;
+    }
+
+    .badge-text-large {
+        font-size: 65px;
+    }
+
+    .badge-text-medium {
+        font-size: 20px;
     }
 }
 
@@ -404,53 +529,97 @@ body {
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .nav-container {
         padding: 0 20px;
     }
-    
+
     .hero-section {
+        flex-direction: column;
+        gap: 30px;
         margin-top: 40px;
     }
-    
-    .badge-row {
-        flex-direction: column;
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+    }
+
+    .mascot-container {
+        width: 100%;
+        height: 400px;
+    }
+
+    .mascot-img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .badges-container {
         gap: 15px;
     }
-    
+
+    .badge-row {
+        gap: 15px;
+    }
+
     .badge {
-        width: 100% !important;
-        height: auto;
         padding: 15px;
+        height: auto;
+        min-height: 60px;
     }
-    
+
+    .badge-outline {
+        width: 49%;
+    }
+
+    .badge-mlm {
+        width: 49%;
+    }
+
+    .badge-revolution {
+        width: 100%;
+    }
+
+    .badge-version {
+        width: 49%;
+    }
+
+    .badge-description {
+        width: 49%;
+    }
+
     .badge-text {
-        font-size: 28px;
+        font-size: 24px;
     }
-    
+
     .badge-text-large {
-        font-size: 48px;
+        font-size: 36px;
     }
-    
+
+    .badge-text-medium {
+        font-size: 18px;
+    }
+
     .opening-content {
         flex-direction: column;
         gap: 20px;
         text-align: center;
     }
-    
+
     .timer-container {
         width: 100%;
         max-width: 500px;
     }
-    
+
     .timer-display {
         gap: 20px;
     }
-    
+
     .timer-number {
         font-size: 48px;
     }
-    
+
     .floating-buttons {
         left: 20px;
         right: 20px;
@@ -458,10 +627,57 @@ body {
         justify-content: center;
         flex-direction: column;
     }
-    
+
     .btn {
         width: 200px;
         height: 80px;
         font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        margin-top: 30px;
+    }
+
+    .badge {
+        padding: 12px;
+        min-height: 50px;
+    }
+
+    .badge-outline {
+        width: 48%;
+    }
+
+    .badge-mlm {
+        width: 48%;
+    }
+
+    .badge-version {
+        width: 48%;
+    }
+
+    .badge-description {
+        width: 48%;
+    }
+
+    .badge-text {
+        font-size: 20px;
+    }
+
+    .badge-text-large {
+        font-size: 28px;
+    }
+
+    .badge-text-medium {
+        font-size: 16px;
+    }
+
+    .timer-number {
+        font-size: 36px;
+    }
+
+    .timer-display {
+        gap: 15px;
     }
 }

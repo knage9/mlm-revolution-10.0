@@ -1,4 +1,15 @@
 // Timer functionality
+function getDeclension(number, forms) {
+    // Forms: [one, two, five] for Russian declension
+    const n = Math.abs(number) % 100;
+    const n1 = n % 10;
+
+    if (n > 10 && n < 20) return forms[2];
+    if (n1 > 1 && n1 < 5) return forms[1];
+    if (n1 === 1) return forms[0];
+    return forms[2];
+}
+
 function updateTimer() {
     const targetDate = new Date('2025-11-17T00:00:00+03:00'); // Moscow time
     const now = new Date();
@@ -10,6 +21,12 @@ function updateTimer() {
         document.getElementById('hours').textContent = '00';
         document.getElementById('minutes').textContent = '00';
         document.getElementById('seconds').textContent = '00';
+
+        // Update labels for zero values
+        document.querySelectorAll('.timer-label')[0].textContent = 'дней';
+        document.querySelectorAll('.timer-label')[1].textContent = 'часов';
+        document.querySelectorAll('.timer-label')[2].textContent = 'минут';
+        document.querySelectorAll('.timer-label')[3].textContent = 'секунд';
         return;
     }
 
@@ -24,6 +41,13 @@ function updateTimer() {
     document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
     document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
     document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+
+    // Update labels with correct declension
+    const labels = document.querySelectorAll('.timer-label');
+    labels[0].textContent = getDeclension(days, ['день', 'дня', 'дней']);
+    labels[1].textContent = getDeclension(hours, ['час', 'часа', 'часов']);
+    labels[2].textContent = getDeclension(minutes, ['минута', 'минуты', 'минут']);
+    labels[3].textContent = getDeclension(seconds, ['секунда', 'секунды', 'секунд']);
 }
 
 // Update timer every second
