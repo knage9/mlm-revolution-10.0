@@ -155,6 +155,7 @@ body {
     line-height: 1.2;
     letter-spacing: -0.05em;
     color: #2F2D2E;
+    text-align: left;
 }
 
 .badge-mlm {
@@ -277,11 +278,14 @@ body {
     background-color: #353535;
     border-radius: 10px;
     padding: 20px;
-    width: 640px;
-    height: 136px;
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    min-height: 136px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .timer-display {
@@ -312,7 +316,7 @@ body {
     font-size: 18px;
     line-height: 1;
     letter-spacing: -0.05em;
-    color: #FFFFFF;
+    color: #CCC5C5;
 }
 
 /* Floating Buttons */
@@ -384,7 +388,9 @@ body {
     .container {
         max-width: 1200px;
     }
-
+    .opening-date{
+        margin-right: 20px;
+    }
     .hero-section {
         gap: 15px;
     }
@@ -450,6 +456,9 @@ body {
 
     .badge-text-medium {
         font-size: 24px;
+    }
+    .mascot-bg{
+        max-width: 465px;
     }
 }
 
@@ -524,16 +533,25 @@ body {
     .badge-text-medium {
         font-size: 20px;
     }
-}
-
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        gap: 20px;
+    .mascot-bg{
+        max-width: 370px;
     }
-
-    .nav-container {
-        padding: 0 20px;
+    .opening-date{
+        max-width: 350px;
+    }
+}
+@media (max-width: 1000px) {
+    .hero-section{
+        display: block;
+        max-width: 960px;
+    }
+    .badges-container{
+        max-width: 960px;
+    }
+    .mascot-bg{
+        margin-top: 20px;
+        max-width: 960px;
+        width: 100%;
     }
 
     .hero-section {
@@ -558,25 +576,25 @@ body {
     }
 
     .badges-container {
-        gap: 15px;
+        gap: 20px;
     }
 
     .badge-row {
-        gap: 15px;
+        gap: 20px;
     }
 
     .badge {
-        padding: 15px;
+        padding: 20px;
         height: auto;
-        min-height: 60px;
+        min-height: 90px;
     }
 
     .badge-outline {
-        width: 49%;
+        width: 40%;
     }
 
     .badge-mlm {
-        width: 49%;
+        width: 60%;
     }
 
     .badge-revolution {
@@ -584,23 +602,49 @@ body {
     }
 
     .badge-version {
-        width: 49%;
+        width: 40%;
     }
 
     .badge-description {
-        width: 49%;
+        width: 60%;
     }
 
     .badge-text {
-        font-size: 24px;
+        font-size: 32px;
     }
 
     .badge-text-large {
-        font-size: 36px;
+        font-size: 42px;
     }
 
     .badge-text-medium {
-        font-size: 18px;
+        font-size: 20px;
+    }
+    .opening-title{
+        font-size: 38px;
+    }
+    .date-text{
+        font-size: 38px;
+    }
+    .timer-number{
+        font-size: 50px;
+    }
+    .timer-display{
+        font-size: 14px;
+    }
+    .floating-buttons{
+        display: none;
+    }
+
+}
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-container {
+        padding: 0 20px;
     }
 
     .opening-content {
@@ -611,15 +655,22 @@ body {
 
     .timer-container {
         width: 100%;
-        max-width: 500px;
+        padding: 20px;
+        min-height: 120px;
     }
 
     .timer-display {
         gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .timer-number {
         font-size: 48px;
+    }
+
+    .timer-label {
+        font-size: 16px;
     }
 
     .floating-buttons {
@@ -638,6 +689,23 @@ body {
         height: 80px;
         font-size: 16px;
         padding: 8px;
+    }
+    .opening-date{
+        margin-right: 0px;
+    }
+}
+@media (max-width: 600px) {
+    .badge-text-medium{
+        font-size: 16px;
+    }
+    .badge-text{
+        font-size: 24px;
+    }
+    .badge-text-large{
+        font-size: 32px;
+    }
+    .badges-container{
+        gap: 15px;
     }
 }
 
@@ -679,12 +747,22 @@ body {
         font-size: 16px;
     }
 
+    .timer-container {
+        padding: 15px;
+        min-height: 100px;
+    }
+
     .timer-number {
         font-size: 36px;
     }
 
     .timer-display {
         gap: 15px;
+        justify-content: center;
+    }
+
+    .timer-label {
+        font-size: 14px;
     }
 
     .floating-buttons {
@@ -697,9 +775,49 @@ body {
         font-size: 14px;
         padding: 6px;
     }
+    .date-text{
+        font-size: 24px;
+    }
+    .opening-date{
+        margin-top: 10px;
+    }
+    .opening-title{
+        font-size: 24px;
+    }
+    .badge-version {
+        width: 30%;
+    }
+
+    .badge-description {
+        width: 70%;
+    }
+    .badges-container{
+        gap: 10px;
+    }
+    .mascot-bg{
+        max-height: 350px;
+    }
 }
 
 @media (max-width: 360px) {
+    .timer-container {
+        padding: 12px;
+        min-height: 90px;
+    }
+
+    .timer-number {
+        font-size: 28px;
+    }
+
+    .timer-display {
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .timer-label {
+        font-size: 12px;
+    }
+
     .floating-buttons {
         gap: 4px;
     }

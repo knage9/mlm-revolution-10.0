@@ -75,12 +75,12 @@ document.querySelectorAll('.btn').forEach(button => {
     });
 });
 
-// Add parallax effect to mascot on scroll (optional enhancement)
-window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const mascotImg = document.querySelector('.mascot-img');
-    if (mascotImg) {
-        const speed = scrolled * 0.5;
-        mascotImg.style.transform = `translateY(${speed}px)`;
-    }
-});
+// // Add parallax effect to mascot on scroll (optional enhancement)
+// window.addEventListener('scroll', function() {
+//     const scrolled = window.pageYOffset;
+//     const mascotImg = document.querySelector('.mascot-img');
+//     if (mascotImg) {
+//         const speed = scrolled * 0.5;
+//         mascotImg.style.transform = `translateY(${speed}px)`;
+//     }
+// });
