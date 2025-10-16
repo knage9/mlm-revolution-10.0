@@ -84,3 +84,67 @@ document.querySelectorAll('.btn').forEach(button => {
 //         mascotImg.style.transform = `translateY(${speed}px)`;
 //     }
 // });
+
+// FAQ Accordion functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+
+        question.addEventListener('click', function() {
+            const isActive = item.classList.contains('active');
+
+            // Close all FAQ items
+            faqItems.forEach(faqItem => {
+                if (faqItem !== item) {
+                    faqItem.classList.remove('active');
+                    const faqAnswer = faqItem.querySelector('.faq-answer');
+                    if (faqAnswer) {
+                        faqAnswer.style.maxHeight = '0px';
+                        faqAnswer.style.opacity = '0';
+                        faqAnswer.style.padding = '0px 30px';
+                    }
+                }
+            });
+
+            // Toggle the clicked item
+            if (isActive) {
+                // Close the item
+                item.classList.remove('active');
+                if (answer) {
+                    answer.style.maxHeight = '0px';
+                    answer.style.opacity = '0';
+                    answer.style.padding = '0px 30px';
+                }
+            } else {
+                // Open the item
+                item.classList.add('active');
+                if (answer) {
+                    // First, set initial state for animation
+                    answer.style.display = 'block';
+                    answer.style.maxHeight = '0px';
+                    answer.style.opacity = '0';
+                    answer.style.padding = '0px 30px';
+
+                    // Force reflow
+                    answer.offsetHeight;
+
+                    // Start animation
+                    answer.style.transition = 'all 0.4s ease-out';
+                    answer.style.maxHeight = '1000px'; // Large enough value
+                    answer.style.opacity = '1';
+                    answer.style.padding = '30px';
+
+                    // After animation completes, remove transition and set final state
+                    setTimeout(() => {
+                        answer.style.transition = '';
+                        answer.style.maxHeight = 'none';
+                        answer.style.height = 'auto';
+                    }, 400);
+                }
+            }
+        });
+    });
+});
