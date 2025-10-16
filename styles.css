@@ -1506,3 +1506,337 @@ body {
         height: 45px;
     }
 }
+
+/* Registration Banner Section */
+.registration-banner {
+    margin-bottom: 20px;
+}
+
+.banner-container {
+    max-width: 1420px;
+    height: 550px;
+    background-image: url('img/bg_2.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.banner-text {
+    flex: 1;
+    max-width: 720px;
+    padding: 20px 0;
+}
+
+.banner-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #2F2D2E;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.banner-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #2F2D2E;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-mascot {
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+    width: 505px;
+    height: 505px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.mascot-banner-img {
+    width: 505px;
+    height: 505px;
+    object-fit: contain;
+    object-position: bottom center;
+}
+
+/* Registration Button */
+.registration-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-registration {
+    width: 100%;
+    max-width: 1420px;
+    height: 60px;
+    background-color: #FF7C5C;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #2F2D2E;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 1000px;
+}
+
+.btn-registration:hover {
+    background-color: #ff6b4a;
+    transform: translateY(-2px);
+}
+
+/* Registration Banner Responsive */
+@media (max-width: 1440px) {
+    .banner-container {
+        width: 1200px;
+        height: 480px;
+    }
+
+    .banner-title {
+        font-size: 38px;
+    }
+
+    .banner-description {
+        font-size: 22px;
+    }
+
+    .banner-mascot {
+        width: 420px;
+        height: 420px;
+        right: 30px;
+    }
+
+    .mascot-banner-img {
+        width: 420px;
+        height: 420px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .banner-container {
+        width: 1000px;
+        height: 420px;
+    }
+
+    .banner-title {
+        font-size: 34px;
+    }
+
+    .banner-description {
+        font-size: 20px;
+    }
+
+    .banner-mascot {
+        width: 380px;
+        height: 380px;
+        right: 20px;
+    }
+
+    .mascot-banner-img {
+        width: 380px;
+        height: 380px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .banner-container {
+        width: 100%;
+        height: 400px;
+    }
+
+    .banner-content {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .banner-text {
+        max-width: 100%;
+    }
+
+    .banner-title {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .banner-description {
+        font-size: 18px;
+    }
+
+    .banner-mascot {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        right: auto;
+        bottom: auto;
+        align-self: center;
+    }
+
+    .mascot-banner-img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-container {
+        height: 350px;
+    }
+
+    .banner-content {
+        padding: 25px;
+    }
+
+    .banner-title {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .banner-description {
+        font-size: 16px;
+    }
+
+    .banner-mascot {
+        width: 250px;
+        height: 250px;
+    }
+
+    .mascot-banner-img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .btn-registration {
+        height: 55px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .banner-container {
+        height: 320px;
+    }
+
+    .banner-content {
+        padding: 20px;
+    }
+
+    .banner-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .banner-description {
+        font-size: 14px;
+    }
+
+    .banner-mascot {
+        width: 200px;
+        height: 200px;
+    }
+
+    .mascot-banner-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .btn-registration {
+        height: 50px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-container {
+        height: 280px;
+    }
+
+    .banner-content {
+        padding: 15px;
+    }
+
+    .banner-title {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .banner-description {
+        font-size: 12px;
+    }
+
+    .banner-mascot {
+        width: 160px;
+        height: 160px;
+    }
+
+    .mascot-banner-img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .btn-registration {
+        height: 45px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .banner-container {
+        height: 250px;
+    }
+
+    .banner-content {
+        padding: 12px;
+    }
+
+    .banner-title {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .banner-description {
+        font-size: 11px;
+    }
+
+    .banner-mascot {
+        width: 140px;
+        height: 140px;
+    }
+
+    .mascot-banner-img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .btn-registration {
+        height: 40px;
+        font-size: 12px;
+    }
+}
