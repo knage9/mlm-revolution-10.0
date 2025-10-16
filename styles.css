@@ -356,10 +356,11 @@ body {
     display: flex;
     gap: 20px;
     justify-content: space-between;
+    width: 100%;
 }
 
 .advantage-card {
-    width: 340px;
+    flex: 1;
     height: 129px;
     background-color: rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -367,10 +368,11 @@ body {
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: space-between;
     padding: 20px;
     position: relative;
+    min-width: 250px;
 }
 
 .card-number {
@@ -390,7 +392,7 @@ body {
     line-height: 1.2;
     letter-spacing: -0.04em;
     color: rgba(0, 0, 0, 0.7);
-    text-align: center;
+    text-align: left;
     margin-bottom: 0;
 }
 
@@ -486,31 +488,17 @@ body {
         gap: 15px;
     }
 
-    .automation-title {
-        font-size: 44px;
-    }
-
-    .automation-subtitle {
-        font-size: 44px;
-    }
-
     .advantages-container {
-        gap: 18px;
+        gap: 20px;
     }
 
     .advantage-card {
-        width: 310px;
-        height: 120px;
-        padding: 18px;
+        padding: 20px;
     }
 
-    .card-number {
-        font-size: 38px;
-    }
 
-    .card-text {
-        font-size: 15px;
-    }
+
+
 
     .hero-left {
         width: 680px;
@@ -582,6 +570,13 @@ body {
 @media (max-width: 1200px) {
     .container {
         max-width: 1000px;
+    }
+
+    .opening-title{
+        font-size: 40px;
+    }
+    .date-text{
+        font-size: 40px;
     }
 
     .hero-section {
@@ -666,22 +661,16 @@ body {
     }
 
     .advantages-container {
-        gap: 15px;
+        gap: 20px;
     }
 
     .advantage-card {
-        width: 260px;
-        height: 110px;
-        padding: 15px;
+        padding: 20px;
     }
 
-    .card-number {
-        font-size: 35px;
-    }
+  
 
-    .card-text {
-        font-size: 14px;
-    }
+
 }
 @media (max-width: 1000px) {
     .hero-section{
@@ -788,13 +777,13 @@ body {
     }
 
     .automation-title {
-        font-size: 32px;
-        padding: 8px 16px;
-        margin-bottom: 15px;
+        font-size: 38px;
+        padding: 10px 20px;
     }
 
     .automation-subtitle {
-        font-size: 28px;
+        font-size: 38px;
+        max-width: 750px;
     }
 
     .advantages-container {
@@ -804,18 +793,11 @@ body {
     }
 
     .advantage-card {
-        width: 280px;
-        height: 110px;
-        padding: 15px;
+        padding: 20px;
     }
 
-    .card-number {
-        font-size: 32px;
-    }
 
-    .card-text {
-        font-size: 14px;
-    }
+  
 
 }
 @media (max-width: 768px) {
@@ -879,52 +861,37 @@ body {
         margin-bottom: 25px;
     }
 
-    .automation-header {
-        margin-bottom: 25px;
-        text-align: center;
-    }
 
     .automation-title {
-        font-size: 28px;
-        padding: 8px 16px;
-        margin-bottom: 15px;
-        display: block;
+        font-size: 32px;
     }
 
     .automation-subtitle {
-        font-size: 24px;
+        font-size: 32px;
+    }
+    .opening-title, .date-text{
+        font-size: 32px;
     }
 
     .advantages-container {
-        gap: 15px;
+        gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .advantage-card {
-        width: 240px;
-        height: 100px;
-        padding: 12px;
+        padding: 20px;
     }
 
-    .card-number {
-        font-size: 28px;
-    }
 
-    .card-text {
-        font-size: 13px;
-    }
+
 
     .card-icon {
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         margin-bottom: 8px;
     }
 
-    .network-icon {
-        width: 30px;
-        height: 30px;
-    }
 }
 @media (max-width: 600px) {
     .badge-text-medium{
@@ -944,52 +911,35 @@ body {
         margin-bottom: 20px;
     }
 
-    .automation-header {
-        margin-bottom: 20px;
-        text-align: center;
-    }
 
     .automation-title {
         font-size: 24px;
-        padding: 6px 12px;
-        margin-bottom: 12px;
-        display: block;
     }
 
     .automation-subtitle {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .advantages-container {
-        gap: 12px;
+        gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .advantage-card {
-        width: 200px;
-        height: 90px;
-        padding: 10px;
+        padding: 20px;
     }
 
-    .card-number {
-        font-size: 24px;
-    }
 
-    .card-text {
-        font-size: 12px;
-    }
+
+  
 
     .card-icon {
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
         margin-bottom: 6px;
     }
 
-    .network-icon {
-        width: 25px;
-        height: 25px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -1102,34 +1052,22 @@ body {
     }
 
     .advantages-container {
-        gap: 10px;
+        gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .advantage-card {
-        width: 160px;
-        height: 80px;
-        padding: 8px;
+        padding: 20px;
     }
 
-    .card-number {
-        font-size: 20px;
-    }
 
-    .card-text {
-        font-size: 11px;
-    }
+
 
     .card-icon {
-        width: 20px;
-        height: 20px;
+        width: 25px;
+        height: 25px;
         margin-bottom: 4px;
-    }
-
-    .network-icon {
-        width: 20px;
-        height: 20px;
     }
 }
 
@@ -1184,33 +1122,19 @@ body {
     }
 
     .advantages-container {
-        gap: 8px;
+        gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .advantage-card {
-        width: 140px;
-        height: 70px;
-        padding: 6px;
-    }
-
-    .card-number {
-        font-size: 18px;
-    }
-
-    .card-text {
-        font-size: 10px;
+        padding: 20px;
     }
 
     .card-icon {
-        width: 18px;
-        height: 18px;
+        width: 22px;
+        height: 22px;
         margin-bottom: 3px;
     }
 
-    .network-icon {
-        width: 18px;
-        height: 18px;
-    }
 }
