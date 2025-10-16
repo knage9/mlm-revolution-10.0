@@ -85,6 +85,59 @@ document.querySelectorAll('.btn').forEach(button => {
 //     }
 // });
 
+// Burger Menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const burgerButton = document.getElementById('burgerButton');
+    const burgerNav = document.getElementById('burgerNav');
+
+    if (burgerButton && burgerNav) {
+        burgerButton.addEventListener('click', function() {
+            // Toggle burger button animation
+            burgerButton.classList.toggle('active');
+
+            // Toggle burger navigation visibility
+            burgerNav.classList.toggle('active');
+
+            // Prevent body scroll when menu is open on mobile
+            if (burgerNav.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close burger menu when clicking on a link
+        const burgerLinks = burgerNav.querySelectorAll('.burger-nav-link');
+        burgerLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                burgerButton.classList.remove('active');
+                burgerNav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Close burger menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideBurger = burgerButton.contains(event.target) || burgerNav.contains(event.target);
+
+            if (!isClickInsideBurger && burgerNav.classList.contains('active')) {
+                burgerButton.classList.remove('active');
+                burgerNav.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close burger menu on window resize if screen becomes larger than 1000px
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 1000 && burgerNav.classList.contains('active')) {
+                burgerButton.classList.remove('active');
+                burgerNav.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+});
+
 // FAQ Accordion functionality
 document.addEventListener('DOMContentLoaded', function() {
     const faqItems = document.querySelectorAll('.faq-item');
