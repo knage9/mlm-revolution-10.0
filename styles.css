@@ -125,7 +125,7 @@ body {
 }
 
 .burger-button.active .burger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+    transform: rotate(-45deg) translate(4px, -4px);
 }
 
 .burger-nav {
