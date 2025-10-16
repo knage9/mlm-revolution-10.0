@@ -2854,3 +2854,288 @@ body {
         font-size: 18px;
     }
 }
+
+/* Organizer Section */
+.organizer-section {
+    margin-bottom: 20px;
+}
+
+.organizer-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #2F2D2E;
+    margin-bottom: 30px;
+}
+
+.organizer-description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: -0.04em;
+    color: #2F2D2E;
+    margin-bottom: 60px;
+    max-width: 800px;
+}
+
+.organizer-card-container {
+    background: linear-gradient(135deg, #FF7C5C 0%, #FFB3A7 48%, #AE8EBA 100%);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.organizer-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.organizer-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #2F2D2E;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.organizer-achievements {
+    width: 100%;
+}
+
+.achievements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.achievements-list li {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    color: #2F2D2E;
+    position: relative;
+    padding-left: 20px;
+}
+
+.achievements-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #FF7C5C;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Organizer Section Responsive */
+@media (max-width: 1440px) {
+    .organizer-title {
+        font-size: 44px;
+    }
+
+    .organizer-description {
+        font-size: 22px;
+    }
+
+    .organizer-name {
+        font-size: 38px;
+    }
+
+    .achievements-list li {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .organizer-title {
+        font-size: 40px;
+    }
+
+    .organizer-description {
+        font-size: 20px;
+    }
+
+    .organizer-name {
+        font-size: 34px;
+    }
+
+    .achievements-list li {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .organizer-section {
+        margin-top: 100px;
+    }
+
+    .organizer-title {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .organizer-description {
+        font-size: 18px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .organizer-card-container {
+        padding: 30px;
+    }
+
+    .organizer-card {
+        padding: 30px;
+    }
+
+    .organizer-name {
+        font-size: 30px;
+    }
+
+    .achievements-list li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .organizer-section {
+        margin-top: 80px;
+    }
+
+    .organizer-title {
+        font-size: 32px;
+    }
+
+    .organizer-description {
+        font-size: 16px;
+    }
+
+    .organizer-card-container {
+        padding: 25px;
+    }
+
+    .organizer-card {
+        padding: 25px;
+    }
+
+    .organizer-name {
+        font-size: 28px;
+    }
+
+    .achievements-list li {
+        font-size: 15px;
+        padding-left: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .organizer-section {
+        margin-top: 60px;
+    }
+
+    .organizer-title {
+        font-size: 28px;
+    }
+
+    .organizer-description {
+        font-size: 15px;
+    }
+
+    .organizer-card-container {
+        padding: 20px;
+    }
+
+    .organizer-card {
+        padding: 20px;
+    }
+
+    .organizer-name {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .achievements-list li {
+        font-size: 14px;
+        padding-left: 15px;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .organizer-section {
+        margin-top: 50px;
+    }
+
+    .organizer-title {
+        font-size: 24px;
+    }
+
+    .organizer-description {
+        font-size: 14px;
+    }
+
+    .organizer-card-container {
+        padding: 15px;
+    }
+
+    .organizer-card {
+        padding: 18px;
+    }
+
+    .organizer-name {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .achievements-list li {
+        font-size: 13px;
+        padding-left: 12px;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .organizer-title {
+        font-size: 22px;
+    }
+
+    .organizer-description {
+        font-size: 13px;
+    }
+
+    .organizer-card-container {
+        padding: 12px;
+    }
+
+    .organizer-card {
+        padding: 15px;
+    }
+
+    .organizer-name {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
+    .achievements-list li {
+        font-size: 12px;
+        padding-left: 10px;
+        gap: 8px;
+    }
+}
