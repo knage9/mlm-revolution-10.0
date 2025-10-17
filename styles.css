@@ -454,7 +454,7 @@ body {
 
 .advantage-card {
     flex: 1;
-    height: 129px;
+    height: auto;
     background-color: rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 10px;
@@ -465,7 +465,6 @@ body {
     justify-content: space-between;
     padding: 20px;
     position: relative;
-    min-width: 250px;
 }
 
 .card-number {
@@ -900,11 +899,6 @@ body {
 
 }
 @media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        gap: 20px;
-    }
-
     .nav-container {
         padding: 0 20px;
     }
@@ -1158,7 +1152,6 @@ body {
 
     .automation-header {
         margin-bottom: 15px;
-        text-align: center;
     }
 
     .automation-title {
@@ -1240,7 +1233,6 @@ body {
 
     .automation-header {
         margin-bottom: 12px;
-        text-align: center;
     }
 
     .automation-title {
@@ -3241,7 +3233,7 @@ body {
     font-size: 24px;
     line-height: 1;
     letter-spacing: -0.05em;
-    color: #2F2D2E;
+    color: white;
     margin: 0;
 }
 
@@ -3825,4 +3817,36 @@ body {
         padding-left: 10px;
         gap: 8px;
     }
+}
+
+
+@media (max-width: 870px) {
+        .advantage-card{
+            min-width: 190px;
+        }
+        .card-text{
+            max-width: 300px;
+        }
+}
+
+@media (max-width: 650px) {
+    .card-number{
+        font-size: 36px;
+    }
+    .network-icon{
+        width: 30px;
+        height: auto;
+    }
+}
+
+@media (max-width: 550px) {
+        .advantage-card{
+            height: 150px;
+        }
+}
+
+@media (max-width: 450px) {
+        .advantage-card{
+            height: 125px;
+        }
 }
