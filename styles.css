@@ -4206,3 +4206,23 @@ body {
 .name_2{
     color: #2F2D2E;
 }
+
+.price-title{
+    max-width: 1380px;
+    margin: 0 auto;
+    margin-top: 150px;
+    padding: 0px 20px;
+}
+
+.platunum-btn{
+    background-image: url('img/bg-mascot-hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.platinu-tariff{
+    background-color: #FF7C5C;
+    border: none;
+}
