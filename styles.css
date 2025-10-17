@@ -864,7 +864,6 @@ body {
     flex-direction: row;
     gap: 10px;
     z-index: 1000;
-    display: none;
 }
 
 .floating-buttons::before {
