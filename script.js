@@ -10,6 +10,192 @@ function getDeclension(number, forms) {
     return forms[2];
 }
 
+// Intersection Observer for scroll animations
+function initScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-visible');
+            }
+        });
+    }, observerOptions);
+
+    // Observe all elements with animation classes
+    const animatedElements = document.querySelectorAll('[class*="animate-"]');
+    animatedElements.forEach(el => {
+        observer.observe(el);
+    });
+}
+
+// Enhanced button interactions with digital effects
+function initButtonEffects() {
+    // Registration button
+    const registrationBtn = document.querySelector('.btn-registration');
+    if (registrationBtn) {
+        registrationBtn.addEventListener('click', function() {
+            // Digital pulse effect
+            this.style.transform = 'scale(0.95)';
+            this.style.boxShadow = '0 0 20px rgba(255, 124, 92, 0.6)';
+
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+                this.style.boxShadow = 'none';
+            }, 150);
+        });
+
+        // Hover effect with glow
+        registrationBtn.addEventListener('mouseenter', function() {
+            this.style.boxShadow = '0 0 15px rgba(255, 124, 92, 0.4)';
+        });
+
+        registrationBtn.addEventListener('mouseleave', function() {
+            this.style.boxShadow = 'none';
+        });
+    }
+
+    // Floating buttons
+    const floatingBtns = document.querySelectorAll('.floating-buttons .btn');
+    floatingBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Digital click effect
+            this.style.transform = 'scale(0.9) translateY(2px)';
+            this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.3)';
+
+            setTimeout(() => {
+                this.style.transform = 'scale(1) translateY(0)';
+                this.style.boxShadow = 'none';
+            }, 150);
+        });
+
+        // Enhanced hover effects
+        btn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px)';
+            this.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.2)';
+        });
+
+        btn.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = 'none';
+        });
+    });
+
+    // Pricing card buttons
+    const cardButtons = document.querySelectorAll('.card-button');
+    cardButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Digital pulse effect
+            this.style.transform = 'scale(0.95)';
+            this.style.boxShadow = '0 0 20px rgba(255, 124, 92, 0.8)';
+
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+                this.style.boxShadow = 'none';
+            }, 150);
+        });
+
+        // Hover effect with digital glow
+        btn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+            this.style.boxShadow = '0 0 15px rgba(255, 124, 92, 0.5)';
+        });
+
+        btn.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = 'none';
+        });
+    });
+}
+
+// Enhanced card hover effects
+function initCardEffects() {
+    // Advantage cards
+    const advantageCards = document.querySelectorAll('.advantage-card');
+    advantageCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px) scale(1.02)';
+            this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
+        });
+
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = 'none';
+        });
+    });
+
+    // Change cards
+    const changeCards = document.querySelectorAll('.change-card');
+    changeCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px) scale(1.03)';
+            this.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.15)';
+        });
+
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = 'none';
+        });
+    });
+
+    // Speaker cards
+    const speakerCards = document.querySelectorAll('.speaker-card');
+    speakerCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.05)';
+            this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
+        });
+
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = 'none';
+        });
+    });
+
+    // Pricing cards
+    const pricingCards = document.querySelectorAll('.pricing-card');
+    pricingCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-15px) scale(1.08)';
+            this.style.boxShadow = '0 25px 50px rgba(0, 0, 0, 0.2)';
+        });
+
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = 'none';
+        });
+    });
+}
+
+// Badge floating animation
+function initBadgeAnimations() {
+    const badges = document.querySelectorAll('.badge');
+    badges.forEach((badge, index) => {
+        badge.addEventListener('mouseenter', function() {
+            this.style.animation = `pulse 0.6s ease-in-out ${index * 0.1}s`;
+        });
+
+        badge.addEventListener('animationend', function() {
+            this.style.animation = '';
+        });
+    });
+}
+
+// Mascot floating effect
+function initMascotAnimation() {
+    const mascotImg = document.querySelector('.mascot-img');
+    if (mascotImg) {
+        let floatDirection = 1;
+        setInterval(() => {
+            mascotImg.style.transform = `translateY(${floatDirection * 3}px)`;
+            floatDirection *= -1;
+        }, 2000);
+    }
+}
+
 function updateTimer() {
     const targetDate = new Date('2025-11-17T00:00:00+03:00'); // Moscow time
     const now = new Date();
@@ -200,4 +386,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Initialize all animations and effects
+    initScrollAnimations();
+    initButtonEffects();
+    initCardEffects();
+    initBadgeAnimations();
+    initMascotAnimation();
 });
