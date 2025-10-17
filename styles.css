@@ -491,38 +491,39 @@ body {
     position: absolute;
     top: 90px;
     right: 0;
-    width: 250px;
-    background-color: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    background-color: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     gap: 0;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
+    transform: translateY(-15px) scale(0.95);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 999;
 }
 
 .burger-nav.active {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
 
 .burger-nav-link {
     font-family: 'Inter', sans-serif;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 22px;
     color: #2F2D2E;
     text-decoration: none;
-    line-height: 1;
-    padding: 20px 25px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    line-height: 1.2;
+    padding: 25px 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    display: block;
 }
 
 .burger-nav-link:last-child {
@@ -530,8 +531,9 @@ body {
 }
 
 .burger-nav-link:hover {
-    background-color: rgba(255, 124, 92, 0.1);
+    background-color: rgba(255, 124, 92, 0.12);
     color: #FF7C5C;
+    padding-left: 35px;
 }
 
 /* Hero Section */
@@ -1344,13 +1346,13 @@ body {
 
     /* Burger menu responsive styles for tablets */
     .burger-nav {
-        width: 220px;
+        width: 280px;
         top: 85px;
     }
 
     .burger-nav-link {
-        padding: 18px 20px;
-        font-size: 16px;
+        padding: 22px 25px;
+        font-size: 20px;
     }
 
 }
@@ -1403,13 +1405,13 @@ body {
 
     /* Burger menu responsive styles for small mobile */
     .burger-nav {
-        width: 200px;
+        width: 260px;
         top: 80px;
     }
 
     .burger-nav-link {
-        padding: 15px 18px;
-        font-size: 15px;
+        padding: 20px 22px;
+        font-size: 18px;
     }
 
 }
@@ -1472,6 +1474,8 @@ body {
 
     .floating-buttons {
         gap: 6px;
+        max-width: 290px;
+
     }
 
     .btn {
@@ -1543,13 +1547,13 @@ body {
 
     /* Burger menu responsive styles for extra small mobile */
     .burger-nav {
-        width: 180px;
+        width: 240px;
         top: 75px;
     }
 
     .burger-nav-link {
-        padding: 12px 15px;
-        font-size: 14px;
+        padding: 18px 20px;
+        font-size: 16px;
     }
 
 }
@@ -1575,6 +1579,7 @@ body {
 
     .floating-buttons {
         gap: 4px;
+        max-width: 247px;
     }
 
     .btn {
@@ -1621,13 +1626,13 @@ body {
 
     /* Burger menu responsive styles for very small mobile */
     .burger-nav {
-        width: 160px;
+        width: 220px;
         top: 70px;
     }
 
     .burger-nav-link {
-        padding: 10px 12px;
-        font-size: 13px;
+        padding: 16px 18px;
+        font-size: 15px;
     }
 
 }
