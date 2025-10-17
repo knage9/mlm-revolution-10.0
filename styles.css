@@ -907,7 +907,9 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #2F2D2E;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .btn-secondary {
@@ -1206,9 +1208,6 @@ body {
     }
     .timer-display{
         font-size: 14px;
-    }
-    .floating-buttons{
-        display: none;
     }
 
     .automation-section {
