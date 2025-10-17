@@ -368,7 +368,7 @@ body {
 .container {
     max-width: 1420px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 100px 20px 20px 20px;
 }
 
 /* Header */
@@ -376,8 +376,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    position: relative;
+    padding: 20px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #FFF7ED;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .header-left {
@@ -482,7 +489,7 @@ body {
 
 .burger-nav {
     position: absolute;
-    top: 70px;
+    top: 90px;
     right: 0;
     width: 250px;
     background-color: rgba(255, 255, 255, 0.95);
@@ -497,7 +504,7 @@ body {
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s ease;
-    z-index: 1000;
+    z-index: 999;
 }
 
 .burger-nav.active {
@@ -1338,7 +1345,7 @@ body {
     /* Burger menu responsive styles for tablets */
     .burger-nav {
         width: 220px;
-        top: 65px;
+        top: 85px;
     }
 
     .burger-nav-link {
@@ -1397,7 +1404,7 @@ body {
     /* Burger menu responsive styles for small mobile */
     .burger-nav {
         width: 200px;
-        top: 60px;
+        top: 80px;
     }
 
     .burger-nav-link {
@@ -1537,7 +1544,7 @@ body {
     /* Burger menu responsive styles for extra small mobile */
     .burger-nav {
         width: 180px;
-        top: 55px;
+        top: 75px;
     }
 
     .burger-nav-link {
@@ -1615,7 +1622,7 @@ body {
     /* Burger menu responsive styles for very small mobile */
     .burger-nav {
         width: 160px;
-        top: 50px;
+        top: 70px;
     }
 
     .burger-nav-link {
