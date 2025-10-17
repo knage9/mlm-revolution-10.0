@@ -117,8 +117,8 @@ function initCardEffects() {
     const advantageCards = document.querySelectorAll('.advantage-card');
     advantageCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px) scale(1.02)';
-            this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
+            this.style.transform = 'translateY(-3px) scale(1.01)';
+            this.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.05)';
         });
 
         card.addEventListener('mouseleave', function() {
@@ -131,8 +131,8 @@ function initCardEffects() {
     const changeCards = document.querySelectorAll('.change-card');
     changeCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-8px) scale(1.03)';
-            this.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.15)';
+            this.style.transform = 'translateY(-4px) scale(1.015)';
+            this.style.boxShadow = '0 6px 18px rgba(0, 0, 0, 0.08)';
         });
 
         card.addEventListener('mouseleave', function() {
@@ -145,8 +145,8 @@ function initCardEffects() {
     const speakerCards = document.querySelectorAll('.speaker-card');
     speakerCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.05)';
-            this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
+            this.style.transform = 'translateY(-5px) scale(1.02)';
+            this.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.12)';
         });
 
         card.addEventListener('mouseleave', function() {
@@ -159,8 +159,8 @@ function initCardEffects() {
     const pricingCards = document.querySelectorAll('.pricing-card');
     pricingCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-15px) scale(1.08)';
-            this.style.boxShadow = '0 25px 50px rgba(0, 0, 0, 0.2)';
+            this.style.transform = 'translateY(-6px) scale(1.025)';
+            this.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.1)';
         });
 
         card.addEventListener('mouseleave', function() {
@@ -184,17 +184,7 @@ function initBadgeAnimations() {
     });
 }
 
-// Mascot floating effect
-function initMascotAnimation() {
-    const mascotImg = document.querySelector('.mascot-img');
-    if (mascotImg) {
-        let floatDirection = 1;
-        setInterval(() => {
-            mascotImg.style.transform = `translateY(${floatDirection * 3}px)`;
-            floatDirection *= -1;
-        }, 2000);
-    }
-}
+
 
 function updateTimer() {
     const targetDate = new Date('2025-11-17T00:00:00+03:00'); // Moscow time
@@ -260,16 +250,6 @@ document.querySelectorAll('.btn').forEach(button => {
         }, 150);
     });
 });
-
-// // Add parallax effect to mascot on scroll (optional enhancement)
-// window.addEventListener('scroll', function() {
-//     const scrolled = window.pageYOffset;
-//     const mascotImg = document.querySelector('.mascot-img');
-//     if (mascotImg) {
-//         const speed = scrolled * 0.5;
-//         mascotImg.style.transform = `translateY(${speed}px)`;
-//     }
-// });
 
 // Burger Menu functionality
 document.addEventListener('DOMContentLoaded', function() {
@@ -392,5 +372,4 @@ document.addEventListener('DOMContentLoaded', function() {
     initButtonEffects();
     initCardEffects();
     initBadgeAnimations();
-    initMascotAnimation();
 });
