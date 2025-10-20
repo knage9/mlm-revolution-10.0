@@ -4418,6 +4418,7 @@ body {
     gap: 40px;
     margin-bottom: 40px;
     position: relative;
+    width: 100%;
 }
 
 .testimonial-nav-btn {
@@ -4433,13 +4434,14 @@ body {
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    flex-shrink: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 2;
 }
 
 .testimonial-nav-btn:hover {
     background-color: #FFFFFF;
-    transform: scale(1.05);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
     border-color: rgba(255, 124, 92, 0.3);
 }
@@ -4448,9 +4450,17 @@ body {
     transform: scale(0.95);
 }
 
+.testimonial-prev-btn {
+    left: 20px;
+}
+
+.testimonial-next-btn {
+    right: 20px;
+}
+
 .testimonial-card {
-    width: 600px;
-    height: 400px;
+    width: 100%;
+    height: 500px;
     background-color: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 12px;
@@ -4465,7 +4475,6 @@ body {
 }
 
 .testimonial-card:hover {
-    transform: translateY(-2px);
     box-shadow: 0 12px 50px rgba(0, 0, 0, 0.18);
 }
 
@@ -4597,11 +4606,11 @@ body {
     }
 
     .testimonial-prev-btn {
-        left: -80px;
+        left: 20px;
     }
 
     .testimonial-next-btn {
-        right: -80px;
+        right: 20px;
     }
 }
 
@@ -4625,11 +4634,11 @@ body {
     }
 
     .testimonial-prev-btn {
-        left: -70px;
+        left: 15px;
     }
 
     .testimonial-next-btn {
-        right: -70px;
+        right: 15px;
     }
 
     .testimonial-indicators {
@@ -4663,11 +4672,11 @@ body {
     }
 
     .testimonial-prev-btn {
-        left: -60px;
+        left: 10px;
     }
 
     .testimonial-next-btn {
-        right: -60px;
+        right: 10px;
     }
 }
 
@@ -4692,11 +4701,11 @@ body {
     }
 
     .testimonial-prev-btn {
-        left: -50px;
+        left: 8px;
     }
 
     .testimonial-next-btn {
-        right: -50px;
+        right: 8px;
     }
 
     .testimonial-indicators {
@@ -4726,11 +4735,11 @@ body {
     }
 
     .testimonial-prev-btn {
-        left: -45px;
+        left: 5px;
     }
 
     .testimonial-next-btn {
-        right: -45px;
+        right: 5px;
     }
 }
 
