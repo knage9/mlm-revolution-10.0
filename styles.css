@@ -876,11 +876,23 @@ body {
 .floating-buttons {
     position: fixed;
     bottom: 20px;
+    left: 20px;
     right: 20px;
     display: flex;
     flex-direction: row;
     gap: 10px;
     z-index: 1000;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.floating-buttons.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .floating-buttons::before {

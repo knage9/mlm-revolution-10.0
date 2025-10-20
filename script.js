@@ -367,9 +367,63 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Initialize all animations and effects
+// Initialize floating buttons scroll animation
+function initFloatingButtonsScroll() {
+    const floatingButtons = document.querySelector('.floating-buttons');
+    if (!floatingButtons) return;
+
+    let lastScrollTop = 0;
+    let scrollTimeout;
+    let isScrollingDown = false;
+
+    function handleScroll() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Clear the previous timeout
+        if (scrollTimeout) {
+            clearTimeout(scrollTimeout);
+        }
+
+        // Determine scroll direction
+        if (scrollTop > lastScrollTop) {
+            // Scrolling down
+            if (!isScrollingDown && scrollTop > 50) {
+                isScrollingDown = true;
+                floatingButtons.classList.add('visible');
+            }
+        } else {
+            // Scrolling up
+            isScrollingDown = false;
+        }
+
+        // Set a timeout to hide buttons when scrolling stops
+        scrollTimeout = setTimeout(() => {
+            if (scrollTop > 50) {
+                floatingButtons.classList.remove('visible');
+                isScrollingDown = false;
+            }
+        }, 1500); // Hide after 1.5 seconds of no scrolling
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    }
+
+    // Throttle scroll events for better performance
+    let ticking = false;
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(handleScroll);
+            ticking = true;
+            setTimeout(() => { ticking = false; }, 16);
+        }
+    }
+
+    window.addEventListener('scroll', requestTick, { passive: true });
+}
+
+// Initialize all animations and effects
     initScrollAnimations();
     initButtonEffects();
     initCardEffects();
     initBadgeAnimations();
+    initFloatingButtonsScroll();
 });
