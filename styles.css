@@ -2652,53 +2652,89 @@ body {
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     position: relative;
 }
 
+.original-price-badge{
+    margin-top: 20px;
+}
+
 .price-badge {
-    background-color: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
     backdrop-filter: blur(10px);
-    padding: 15px 20px;
+    padding: 18px 24px;
     text-align: center;
     transition: all 0.3s ease;
+    position: relative;
 }
 
 .price-badge:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .price-label {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.2;
-    letter-spacing: -0.02em;
-    color: rgba(47, 45, 46, 0.7);
-    margin-bottom: 5px;
+    letter-spacing: -0.01em;
+    color: rgba(47, 45, 46, 0.65);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
 }
 
 .price-value {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1.1;
     letter-spacing: -0.02em;
     color: #2F2D2E;
+    transition: all 0.3s ease;
 }
 
 .original-price-badge .price-value {
-    color: rgba(47, 45, 46, 0.6);
+    color: rgba(47, 45, 46, 0.45);
     text-decoration: line-through;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+
+.special-price-badge {
+    background: linear-gradient(135deg, rgba(255, 124, 92, 0.08), rgba(255, 179, 167, 0.04));
+    border: 1px solid rgba(255, 124, 92, 0.2);
+    position: relative;
+}
+
+.special-price-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent, rgba(255, 124, 92, 0.02), transparent);
+    border-radius: 10px;
+    pointer-events: none;
 }
 
 .special-price-badge .price-value {
     color: #FF7C5C;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 36px;
+    letter-spacing: -5%;
+}
+
+.special-price-badge .price-label {
+    color: rgba(255, 124, 92, 0.7);
+    font-weight: 500;
 }
 
 /* Pricing Cards Responsive */
