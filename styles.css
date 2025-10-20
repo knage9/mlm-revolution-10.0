@@ -933,6 +933,79 @@ body {
     background-color: #ff6b4a;
 }
 
+/* Black Button */
+.btn-black {
+    width: 600px;
+    height: 60px;
+    background-color: #2F2D2E;
+    color: white;
+    border: none;
+    border-radius: 1000px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-black:hover {
+    background-color: rgba(47, 45, 46, 0.8);
+    transform: translateY(-2px);
+}
+
+.btn-black::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-black:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Black Button Responsive */
+@media (max-width: 768px) {
+    .btn-black {
+        width: 100%;
+        max-width: 500px;
+        height: 55px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .btn-black {
+        height: 50px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-black {
+        height: 45px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .btn-black {
+        height: 40px;
+        font-size: 12px;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 1440px) {
     .container {
