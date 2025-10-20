@@ -368,7 +368,7 @@ body {
 .container {
     max-width: 1420px;
     margin: 0 auto;
-    padding: 100px 20px 20px 20px;
+    padding: 100px 20px 0px 20px;
 }
 
 /* Header */
@@ -573,10 +573,12 @@ body {
 }
 
 .badge-outline {
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 1000px;
     width: 320px;
     background-color: transparent;
+    background-color: rgba(127, 0, 245, 0.05);
+    backdrop-filter: blur(10px);
 }
 
 .badge-solid {
@@ -780,7 +782,7 @@ body {
 
 .automation-header {
     margin-bottom: 50px;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 .automation-title {
@@ -800,10 +802,11 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 48px;
-    line-height: 1;
+    line-height: 125%;
     letter-spacing: -0.05em;
     color: #2F2D2E;
     max-width: 987px;
+    margin-top: 5px;
 }
 
 .advantages-container {
@@ -2133,7 +2136,7 @@ body {
 
 /* Changes Section */
 .changes-section {
-    margin-top: 150px;
+    margin-top: 100px;
     margin-bottom: 20px;
 }
 
@@ -2499,7 +2502,7 @@ body {
 
 /* Pricing Cards Section */
 .pricing-section {
-    margin-top: 250px;
+    margin-top: 100px;
     margin-bottom: 20px;
     padding: 0 20px;
 }
@@ -2855,6 +2858,7 @@ body {
     letter-spacing: -0.05em;
     color: #2F2D2E;
     margin-bottom: 30px;
+    max-width: 700px;
 }
 
 .speakers-description {
@@ -2865,7 +2869,8 @@ body {
     letter-spacing: -0.04em;
     color: #2F2D2E;
     margin-bottom: 15px;
-    max-width: 800px;
+    max-width: 700px;
+
 }
 
 .speakers-container {
@@ -2929,256 +2934,11 @@ body {
     width: 100%;
 }
 
-/* Speakers Section Responsive */
-@media (max-width: 1440px) {
-    .speakers-title {
-        font-size: 44px;
-    }
 
-    .speakers-description {
-        font-size: 22px;
-    }
-
-    .speaker-card {
-        width: 420px;
-        height: 240px;
-    }
-
-    .speaker-image {
-        width: 180px;
-        height: 200px;
-    }
-
-    .speaker-name {
-        font-size: 24px;
-    }
-
-    .speaker-description {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .speakers-title {
-        font-size: 40px;
-    }
-
-    .speakers-description {
-        font-size: 20px;
-    }
-
-    .speaker-card {
-        width: 380px;
-        height: 220px;
-    }
-
-    .speaker-image {
-        width: 160px;
-        height: 180px;
-    }
-
-    .speaker-name {
-        font-size: 22px;
-    }
-
-    .speaker-description {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 1000px) {
-    .speakers-title {
-        font-size: 36px;
-    }
-
-    .speakers-description {
-        font-size: 18px;
-        max-width: 100%;
-        max-width: 640px;
-    }
-
-    .speakers-container {
-        margin-top: 40px;
-    }
-
-    .speakers-row {
-        gap: 15px;
-    }
-
-    .speaker-card {
-        width: 320px;
-        height: 200px;
-    }
-
-    .speaker-content {
-        padding: 15px;
-        gap: 15px;
-    }
-
-    .speaker-image {
-        width: 100px;
-    }
-
-    .speaker-name {
-        font-size: 20px;
-    }
-
-    .speaker-description {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 768px) {
-    .speakers-title {
-        font-size: 32px;
-    }
-
-    .speakers-description {
-        font-size: 16px;
-    }
-
-    .speakers-row {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .speaker-card {
-        width: 100%;
-        max-width: 460px;
-        height: 200px;
-    }
-
-    .speaker-content {
-        padding: 15px;
-        gap: 15px;
-    }
-
-    .speaker-image {
-        width: 140px;
-        height: 160px;
-    }
-
-    .speaker-name {
-        font-size: 20px;
-    }
-
-    .speaker-description {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 600px) {
-    .speakers-section {
-        margin-top: 100px;
-    }
-
-    .speakers-title {
-        font-size: 28px;
-    }
-
-    .speakers-description {
-        font-size: 15px;
-    }
-
-    .speakers-container {
-        margin-top: 30px;
-    }
-
-    .speaker-card {
-        height: 180px;
-    }
-
-    .speaker-content {
-        padding: 12px;
-        gap: 12px;
-    }
-
-    .speaker-image {
-        width: 120px;
-        height: 140px;
-    }
-
-    .speaker-name {
-        font-size: 18px;
-    }
-
-    .speaker-description {
-        font-size: 13px;
-    }
-}
-
-@media (max-width: 480px) {
-    .speakers-section {
-        margin-top: 80px;
-    }
-
-    .speakers-title {
-        font-size: 24px;
-    }
-
-    .speakers-description {
-        font-size: 14px;
-    }
-
-    .speaker-card {
-        height: 160px;
-    }
-
-    .speaker-content {
-        padding: 10px;
-        gap: 10px;
-    }
-
-    .speaker-image {
-        width: 100px;
-        height: 120px;
-    }
-
-    .speaker-name {
-        font-size: 16px;
-    }
-
-    .speaker-description {
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 360px) {
-    .speakers-title {
-        font-size: 22px;
-    }
-
-    .speakers-description {
-        font-size: 13px;
-    }
-
-    .speaker-card {
-        height: 140px;
-    }
-
-    .speaker-content {
-        padding: 8px;
-        gap: 8px;
-    }
-
-    .speaker-image {
-        width: 80px;
-        height: 100px;
-    }
-
-    .speaker-name {
-        font-size: 14px;
-    }
-
-    .speaker-description {
-        font-size: 11px;
-    }
-}
 
 /* Registration Banner Section */
 .registration-banner {
-    margin-bottom: 20px;
+    margin-top: 100px;
 }
 
 .banner-container {
@@ -3213,7 +2973,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 42px;
-    line-height: 1;
+    line-height: 125%;
     letter-spacing: -0.05em;
     color: #2F2D2E;
     margin: 0 0 20px 0;
@@ -3229,6 +2989,12 @@ body {
     color: #2F2D2E;
     margin: 0;
     padding: 0;
+    background-color: #FFB3A7;
+    color: black;
+    padding: 10px 20px;
+    font-size: 28px;
+    border-radius: 10px;
+    width: 100%;
 }
 
 .banner-mascot {
@@ -3253,11 +3019,11 @@ body {
 .registration-button-container {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .btn-registration {
-    width: 100%;
+    width: 600px;
     max-width: 1420px;
     height: 60px;
     background-color: #FF7C5C;
@@ -3591,7 +3357,7 @@ body {
 .speaker-name {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 32px;
     line-height: 1;
     letter-spacing: -0.05em;
     color: white;
@@ -3601,7 +3367,7 @@ body {
 .speaker-topic {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 1.3;
     letter-spacing: -0.04em;
     color: #252525;
@@ -3637,11 +3403,11 @@ body {
     }
 
     .speaker-name {
-        font-size: 22px;
+        font-size: 30px;
     }
 
     .speaker-topic {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .speaker-time {
@@ -3673,11 +3439,11 @@ body {
     }
 
     .speaker-name {
-        font-size: 20px;
+        font-size: 28px;
     }
 
     .speaker-topic {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .speaker-time {
@@ -3714,11 +3480,11 @@ body {
     }
 
     .speaker-name {
-        font-size: 20px;
+        font-size: 26px;
     }
 
     .speaker-topic {
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .speaker-time {
@@ -3744,11 +3510,11 @@ body {
     }
 
     .speaker-name {
-        font-size: 18px;
+        font-size: 24px;
     }
 
     .speaker-topic {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .speaker-time {
@@ -3778,11 +3544,11 @@ body {
     }
 
     .speaker-name {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .speaker-topic {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .speaker-time {
@@ -3812,7 +3578,7 @@ body {
     }
 
     .speaker-name {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .speaker-topic {
@@ -3842,11 +3608,11 @@ body {
     }
 
     .speaker-name {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .speaker-topic {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .speaker-time {
@@ -4215,8 +3981,14 @@ body {
 .price-title{
     max-width: 1380px;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 100px;
     padding: 0px 20px;
+    text-align: center;
+    line-height: 125%;
+}
+
+.h2-title-price {
+    margin-top: 20px;
 }
 
 .platunum-btn{
