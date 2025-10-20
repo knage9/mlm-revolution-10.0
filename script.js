@@ -559,4 +559,43 @@ function initTestimonialsSlider() {
     initBadgeAnimations();
     initFloatingButtonsScroll();
     initTestimonialsSlider();
+
+    // Registration button handlers
+    initRegistrationButtons();
 });
+
+// Registration button functionality
+function initRegistrationButtons() {
+    // Handle "Участвовать бесплатно" buttons
+    const freeParticipationBtns = document.querySelectorAll('.btn-black, .btn-primary');
+    freeParticipationBtns.forEach(btn => {
+        if (btn.textContent.includes('Участвовать бесплатно')) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.location.href = 'registration.html';
+            });
+        }
+    });
+
+    // Handle "Регистрация" and "Зарегистрироваться" buttons
+    const registrationBtns = document.querySelectorAll('.nav-link, .btn-registration');
+    registrationBtns.forEach(btn => {
+        if (btn.textContent.includes('Регистрация') || btn.textContent.includes('Зарегистрироваться')) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.location.href = 'registration.html';
+            });
+        }
+    });
+
+    // Handle floating buttons "Участвовать бесплатно"
+    const floatingBtns = document.querySelectorAll('.floating-buttons .btn-primary');
+    floatingBtns.forEach(btn => {
+        if (btn.textContent.includes('Участвовать бесплатно')) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.location.href = 'registration.html';
+            });
+        }
+    });
+}
