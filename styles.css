@@ -2647,6 +2647,60 @@ body {
     padding-left: 5px;
 }
 
+.pricing-info {
+    width: 100%;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+}
+
+.price-badge {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.price-badge:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-1px);
+}
+
+.price-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: rgba(47, 45, 46, 0.7);
+    margin-bottom: 5px;
+}
+
+.price-value {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #2F2D2E;
+}
+
+.original-price-badge .price-value {
+    color: rgba(47, 45, 46, 0.6);
+    text-decoration: line-through;
+}
+
+.special-price-badge .price-value {
+    color: #FF7C5C;
+    font-weight: 700;
+    font-size: 24px;
+}
+
 /* Pricing Cards Responsive */
 @media (max-width: 1440px) {
     .pricing-cards {
@@ -2813,6 +2867,32 @@ body {
     .card-description {
         padding: 15px;
     }
+
+    .pricing-info {
+        margin-bottom: 15px;
+        gap: 6px;
+    }
+
+    .original-price {
+        font-size: 18px;
+    }
+
+    .special-price {
+        font-size: 20px;
+        padding: 8px;
+        margin: 0 10px;
+    }
+
+    .special-price::before {
+        font-size: 16px;
+        left: 10px;
+    }
+
+    .special-price::after {
+        font-size: 10px;
+        right: 10px;
+        padding: 3px 6px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -2842,6 +2922,66 @@ body {
 
     .card-description {
         padding: 12px;
+    }
+
+    .pricing-info {
+        margin-bottom: 12px;
+        gap: 5px;
+    }
+
+    .original-price {
+        font-size: 16px;
+    }
+
+    .special-price {
+        font-size: 18px;
+        padding: 6px;
+        margin: 0 8px;
+    }
+
+    .special-price::before {
+        font-size: 14px;
+        left: 8px;
+    }
+
+    .special-price::after {
+        font-size: 9px;
+        right: 8px;
+        padding: 2px 4px;
+    }
+
+    .price-badge {
+        padding: 12px 15px;
+        gap: 8px;
+    }
+
+    .price-label {
+        font-size: 12px;
+    }
+
+    .price-value {
+        font-size: 18px;
+    }
+
+    .special-price-badge .price-value {
+        font-size: 20px;
+    }
+
+    .price-badge {
+        padding: 10px 12px;
+        gap: 6px;
+    }
+
+    .price-label {
+        font-size: 11px;
+    }
+
+    .price-value {
+        font-size: 16px;
+    }
+
+    .special-price-badge .price-value {
+        font-size: 18px;
     }
 }
 
