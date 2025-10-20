@@ -420,10 +420,143 @@ function initFloatingButtonsScroll() {
     window.addEventListener('scroll', requestTick, { passive: true });
 }
 
+// Testimonials Slider functionality
+function initTestimonialsSlider() {
+    const testimonials = [
+        'img/отзыв-1.png',
+        'img/отзыв-2.png',
+        'img/отзыв-3.png',
+        'img/отзыв-4.png',
+        'img/отзыв-5.png',
+        'img/отзыв-6.png',
+        'img/отзыв-7.png'
+    ];
+
+    const testimonialImg = document.getElementById('testimonialImg');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const indicators = document.querySelectorAll('.indicator');
+
+    if (!testimonialImg || !prevBtn || !nextBtn || indicators.length === 0) {
+        return; // Exit if elements not found
+    }
+
+    let currentSlide = 0;
+
+    function updateSlide(slideIndex) {
+        // Remove active class from all indicators
+        indicators.forEach((indicator, index) => {
+            if (index === slideIndex) {
+                indicator.classList.add('active');
+            } else {
+                indicator.classList.remove('active');
+            }
+        });
+
+        // Update image with fade effect
+        if (testimonialImg) {
+            testimonialImg.style.opacity = '0';
+            testimonialImg.style.transform = 'scale(0.95)';
+
+            setTimeout(() => {
+                testimonialImg.src = testimonials[slideIndex];
+                testimonialImg.style.opacity = '1';
+                testimonialImg.style.transform = 'scale(1)';
+            }, 150);
+        }
+
+        currentSlide = slideIndex;
+    }
+
+    function nextSlide() {
+        const nextIndex = (currentSlide + 1) % testimonials.length;
+        updateSlide(nextIndex);
+    }
+
+    function prevSlide() {
+        const prevIndex = (currentSlide - 1 + testimonials.length) % testimonials.length;
+        updateSlide(prevIndex);
+    }
+
+    // Event listeners for navigation buttons
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextSlide);
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevSlide);
+    }
+
+    // Event listeners for indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            updateSlide(index);
+        });
+    });
+
+    // Auto-slide functionality (optional)
+    let autoSlideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+    // Pause auto-slide on hover
+    const testimonialsContainer = document.querySelector('.testimonials-container');
+    if (testimonialsContainer) {
+        testimonialsContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoSlideInterval);
+        });
+
+        testimonialsContainer.addEventListener('mouseleave', () => {
+            autoSlideInterval = setInterval(nextSlide, 5000);
+        });
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            prevSlide();
+        } else if (e.key === 'ArrowRight') {
+            nextSlide();
+        }
+    });
+
+    // Touch/swipe support for mobile
+    let startX = 0;
+    let endX = 0;
+
+    if (testimonialsContainer) {
+        testimonialsContainer.addEventListener('touchstart', (e) => {
+            startX = e.changedTouches[0].screenX;
+        });
+
+        testimonialsContainer.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+    }
+
+    function handleSwipe() {
+        const swipeThreshold = 50; // Minimum distance for swipe
+        const swipeDistance = startX - endX;
+
+        if (Math.abs(swipeDistance) > swipeThreshold) {
+            if (swipeDistance > 0) {
+                // Swipe left - next slide
+                nextSlide();
+            } else {
+                // Swipe right - previous slide
+                prevSlide();
+            }
+        }
+    }
+
+    // Initialize first slide
+    updateSlide(0);
+}
+
 // Initialize all animations and effects
     initScrollAnimations();
     initButtonEffects();
     initCardEffects();
     initBadgeAnimations();
     initFloatingButtonsScroll();
+    initTestimonialsSlider();
 });
