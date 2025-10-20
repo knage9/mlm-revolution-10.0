@@ -376,15 +376,17 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
+    padding: 10px 10px;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #FFF7ED;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
     z-index: 1000;
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    max-width: 1420px;
+    margin: 0 auto;
 }
 
 .header-left {
@@ -395,7 +397,7 @@ body {
 .logo-container {
     width: 120px;
     height: 58px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 1);
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 5px;
     backdrop-filter: blur(10px);
@@ -417,20 +419,20 @@ body {
 
 .nav-container {
     height: 58px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 1);
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 5px;
     backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     padding: 0 40px;
-    gap: 20px;
+    gap: 40px;
 }
 
 .nav-link {
     font-family: 'Inter', sans-serif;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 20px;
     color: #2F2D2E;
     text-decoration: none;
     line-height: 1;
@@ -577,8 +579,11 @@ body {
     border-radius: 1000px;
     width: 320px;
     background-color: transparent;
-    background-color: rgba(127, 0, 245, 0.05);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(100deg, #ff867e 0%, #fdaf7b 55%, #ffc8a5 100%);
+    box-shadow: 0 2px 15px 0 rgba(255, 136, 126, 0.15);
+    border: none;
+
+
 }
 
 .badge-solid {
@@ -912,9 +917,8 @@ body {
 }
 
 .btn-primary {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #FF7C5C;
     color: white;
-    background-color: #2F2D2E;
     white-space: normal;
 }
 
@@ -924,9 +928,17 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.text-primary-btn{
+    max-width: 185px;
+}
+
 .btn-secondary {
-    background-color: #FF7C5C;
     color: #2F2D2E;
+    background: radial-gradient(ellipse at top left, #ffb6b9 0%, #fb8076 80%, #fdd49b 100%);
+    box-shadow: 0 4px 24px 0 rgba(255, 136, 126, 0.18);
+    color: #fff;
+    border: none;
+
 }
 
 .btn-secondary:hover {
@@ -937,7 +949,7 @@ body {
 .btn-black {
     width: 600px;
     height: 60px;
-    background-color: #2F2D2E;
+    background-color: #FF7C5C;
     color: white;
     border: none;
     border-radius: 1000px;
