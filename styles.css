@@ -89,6 +89,44 @@
     }
 }
 
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes buttonShimmer {
+    0% {
+        transform: translateX(-100%) scaleX(0);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateX(0%) scaleX(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%) scaleX(0);
+        opacity: 0.8;
+    }
+}
+
+@keyframes gradientPulse {
+    0%, 100% {
+        background-size: 100% 100%;
+        opacity: 1;
+    }
+    50% {
+        background-size: 120% 120%;
+        opacity: 0.9;
+    }
+}
+
 /* Animation classes */
 .animate-on-scroll {
     opacity: 0;
@@ -830,7 +868,7 @@ body {
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
     justify-content: space-between;
     padding: 20px;
     position: relative;
@@ -842,7 +880,7 @@ body {
     font-size: 42px;
     line-height: 1.2;
     letter-spacing: -0.04em;
-    color: #2F2D2E;
+    color: #FF7C5C;
     margin-top: 0;
 }
 
@@ -853,7 +891,7 @@ body {
     line-height: 1.2;
     letter-spacing: -0.04em;
     color: rgba(0, 0, 0, 0.7);
-    text-align: left;
+    text-align: center;
     margin-bottom: 0;
 }
 
@@ -997,6 +1035,35 @@ body {
 .btn-black:active::after {
     width: 300px;
     height: 300px;
+}
+
+/* Special animated black button for "Участвовать бесплатно" after changes section */
+.free-participation-container .btn-black {
+    background: linear-gradient(45deg, #FF7C5C, #FFB3A7, #AE8EBA, #FF7C5C);
+    background-size: 300% 300%;
+    animation: gradientShift 3s ease-in-out infinite;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.free-participation-container .btn-black:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 124, 92, 0.4);
+    animation: gradientShift 1.5s ease-in-out infinite, gradientPulse 2s ease-in-out infinite;
+}
+
+.free-participation-container .btn-black::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.8s ease;
+}
+
+.free-participation-container .btn-black:hover::before {
+    left: 100%;
 }
 
 /* Black Button Responsive */
@@ -2688,7 +2755,11 @@ body {
 .card-button {
     width: 100%;
     height: 60px;
-    background-color: #FF7C5C;
+   background: linear-gradient(100deg, #ff867e 0%, #fdaf7b 55%, #ffc8a5 100%);
+    box-shadow: 0 2px 15px 0 rgba(255, 136, 126, 0.15);
+    color: #fff;
+    border: none;
+    background-size: 300% 300%;
     border: none;
     border-radius: 1000px;
     font-family: 'Inter', sans-serif;
@@ -2696,15 +2767,37 @@ body {
     font-size: 20px;
     line-height: 1;
     letter-spacing: -0.02em;
-    color: #2F2D2E;
+    color: white;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
 
+.standard-btn{
+    background: none;
+    background-color: #FF7C5C;
 }
 
 .card-button:hover {
-    background-color: #ff6b4a;
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 124, 92, 0.4);
+    animation: gradientShift 1.5s ease-in-out infinite, gradientPulse 2s ease-in-out infinite;
+}
+
+.card-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.8s ease;
+}
+
+.card-button:hover::before {
+    left: 100%;
 }
 
 .card-description {
@@ -3151,8 +3244,10 @@ body {
     line-height: 1;
     letter-spacing: -0.05em;
     color: #2F2D2E;
-    margin-bottom: 30px;
-    max-width: 700px;
+    max-width: 1100px;
+    text-align: center;
+    padding: 0px 20px 20px 20px;
+    margin: 0 auto;
 }
 
 .speakers-description {
@@ -3163,8 +3258,10 @@ body {
     letter-spacing: -0.04em;
     color: #2F2D2E;
     margin-bottom: 15px;
-    max-width: 700px;
-
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0px 20px 0px 20px;
 }
 
 .speakers-container {
@@ -3583,30 +3680,49 @@ body {
 .registration-button-container {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .btn-registration {
     width: 600px;
     max-width: 1420px;
     height: 60px;
-    background-color: #FF7C5C;
+    background: linear-gradient(45deg, #FF7C5C, #FFB3A7, #AE8EBA, #FF7C5C);
+    background-size: 300% 300%;
     border: none;
-    border-radius: 10px;
+    border-radius: 1000px;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 20px;
     line-height: 1;
     letter-spacing: -0.02em;
-    color: #2F2D2E;
+    color: white;
     cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 1000px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    animation: gradientShift 3s ease-in-out infinite;
 }
 
 .btn-registration:hover {
-    background-color: #ff6b4a;
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 124, 92, 0.4);
+    animation: gradientShift 1.5s ease-in-out infinite, gradientPulse 2s ease-in-out infinite;
+}
+
+.btn-registration::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.8s ease;
+}
+
+.btn-registration:hover::before {
+    left: 100%;
 }
 
 /* Registration Banner Responsive */
