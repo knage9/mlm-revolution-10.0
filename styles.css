@@ -2602,7 +2602,7 @@ body {
     color: #2F2D2E;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-bottom: 20px;
+
 }
 
 .card-button:hover {
@@ -2778,6 +2778,11 @@ body {
     .pricing-section {
         margin-top: 200px;
     }
+
+    .special-price-badge .price-value {
+        font-weight: 600;
+        font-size: 32px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -2810,6 +2815,11 @@ body {
 
     .description-list li {
         font-size: 16px;
+    }
+
+    .special-price-badge .price-value {
+        font-weight: 600;
+        font-size: 30px;
     }
 }
 
@@ -2923,11 +2933,22 @@ body {
         font-size: 16px;
         left: 10px;
     }
+    .price-label{
+        font-size: 10px;
+    }
 
     .special-price::after {
         font-size: 10px;
         right: 10px;
         padding: 3px 6px;
+    }
+    .special-price-badge .price-value {
+        font-weight: 500;
+        font-size: 24px;
+    }
+
+    .original-price-badge .price-value {
+        font-size: 16px;
     }
 }
 
