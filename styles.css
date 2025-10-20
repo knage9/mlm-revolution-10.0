@@ -3204,6 +3204,276 @@ body {
     width: 100%;
 }
 
+/* Speakers Section Responsive */
+@media (max-width: 1440px) {
+    .speakers-title {
+        font-size: 44px;
+    }
+
+    .speakers-description {
+        font-size: 22px;
+    }
+
+    .speakers-row {
+        gap: 18px;
+    }
+
+    .speaker-card {
+        max-width: 440px;
+    }
+
+    .speaker-image {
+        width: 160px;
+        height: 180px;
+    }
+
+    .speaker-description {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+    .speakers-title {
+        font-size: 40px;
+    }
+
+    .speakers-description {
+        font-size: 20px;
+    }
+
+    .speakers-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        max-width: 900px;
+        margin: 50px auto 0;
+    }
+
+    .speakers-row {
+        display: contents;
+    }
+
+    .speaker-card {
+        max-width: none;
+        width: 100%;
+    }
+
+    .speaker-image {
+        width: 140px;
+        height: 160px;
+    }
+
+    .speaker-description {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .speakers-section {
+        margin-top: 100px;
+    }
+
+    .speakers-title {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+
+    .speakers-description {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .speakers-container {
+        margin-top: 50px;
+    }
+
+    .speakers-row {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .speaker-card {
+        max-width: 500px;
+        max-height: none;
+    }
+
+    .speaker-content {
+        padding: 25px;
+        gap: 25px;
+    }
+
+    .speaker-image {
+        width: 200px;
+        height: 220px;
+    }
+
+    .speaker-description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .speakers-section {
+        margin-top: 80px;
+    }
+
+    .speakers-title {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .speakers-description {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .speakers-container {
+        margin-top: 40px;
+    }
+
+    .speakers-row {
+        gap: 20px;
+    }
+
+    .speaker-card {
+        max-width: 450px;
+    }
+
+    .speaker-content {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .speaker-image {
+        width: 160px;
+        height: 180px;
+    }
+
+    .speaker-description {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .speakers-section {
+        margin-top: 60px;
+    }
+
+    .speakers-title {
+        font-size: 28px;
+        margin-bottom: 18px;
+    }
+
+    .speakers-description {
+        font-size: 15px;
+    }
+
+    .speakers-container {
+        margin-top: 35px;
+    }
+
+    .speakers-row {
+        gap: 18px;
+    }
+
+    .speaker-card {
+        max-width: 400px;
+    }
+
+    .speaker-content {
+        padding: 18px;
+        gap: 18px;
+    }
+
+    .speaker-image {
+        width: 140px;
+        height: 160px;
+    }
+
+    .speaker-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .speakers-section {
+        margin-top: 50px;
+    }
+
+    .speakers-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .speakers-description {
+        font-size: 14px;
+    }
+
+    .speakers-container {
+        margin-top: 30px;
+    }
+
+    .speakers-row {
+        gap: 15px;
+    }
+
+    .speaker-card {
+        max-width: 350px;
+    }
+
+    .speaker-content {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .speaker-image {
+        width: 120px;
+        height: 140px;
+    }
+
+    .speaker-description {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 360px) {
+    .speakers-title {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .speakers-description {
+        font-size: 13px;
+    }
+
+    .speakers-container {
+        margin-top: 25px;
+    }
+
+    .speakers-row {
+        gap: 12px;
+    }
+
+    .speaker-card {
+        max-width: 300px;
+    }
+
+    .speaker-content {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .speaker-image {
+        width: 100px;
+        height: 120px;
+    }
+
+    .speaker-description {
+        font-size: 12px;
+    }
+}
+
 
 
 /* Registration Banner Section */
