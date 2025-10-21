@@ -232,13 +232,70 @@ setInterval(updateTimer, 1000);
 // Initialize timer immediately
 updateTimer();
 
-// Smooth scrolling for navigation links (optional enhancement)
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        // Add smooth scroll behavior if needed
+// Smooth scrolling for navigation links
+function initSmoothScrolling() {
+    // Handle main navigation links
+    document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                // Calculate offset for header height (approximately 80px)
+                const headerOffset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+
+                // Close burger menu if open
+                closeBurgerMenu();
+            }
+        });
     });
-});
+
+    // Handle burger menu links
+    document.querySelectorAll('.burger-nav-link[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                // Calculate offset for header height (approximately 80px)
+                const headerOffset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+
+                // Close burger menu
+                closeBurgerMenu();
+            }
+        });
+    });
+}
+
+// Helper function to close burger menu
+function closeBurgerMenu() {
+    const burgerButton = document.getElementById('burgerButton');
+    const burgerNav = document.getElementById('burgerNav');
+
+    if (burgerButton && burgerNav && burgerNav.classList.contains('active')) {
+        burgerButton.classList.remove('active');
+        burgerNav.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
 
 // Add some interactive effects for floating buttons
 document.querySelectorAll('.btn').forEach(button => {
@@ -559,6 +616,7 @@ function initTestimonialsSlider() {
     initBadgeAnimations();
     initFloatingButtonsScroll();
     initTestimonialsSlider();
+    initSmoothScrolling();
 
     // Registration button handlers
     initRegistrationButtons();
