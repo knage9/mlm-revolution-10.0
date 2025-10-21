@@ -617,11 +617,6 @@ body {
     border-radius: 1000px;
     width: 320px;
     background-color: transparent;
-    background: linear-gradient(100deg, #ff867e 0%, #fdaf7b 55%, #ffc8a5 100%);
-    box-shadow: 0 2px 15px 0 rgba(255, 136, 126, 0.15);
-    border: none;
-
-
 }
 
 .badge-solid {
@@ -636,6 +631,11 @@ body {
     line-height: 1;
     letter-spacing: -0.05em;
     color: #2F2D2E;
+    background: linear-gradient(90deg, #7c3aed 0%, #b23e7a 50%, #d86834 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 .badge-text-large {
