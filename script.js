@@ -187,22 +187,36 @@ function initBadgeAnimations() {
 
 
 function updateTimer() {
+    // Check if timer elements exist on the page
+    const daysElement = document.getElementById('days');
+    const hoursElement = document.getElementById('hours');
+    const minutesElement = document.getElementById('minutes');
+    const secondsElement = document.getElementById('seconds');
+    const timerLabels = document.querySelectorAll('.timer-label');
+
+    // If timer elements don't exist, exit the function
+    if (!daysElement || !hoursElement || !minutesElement || !secondsElement || timerLabels.length === 0) {
+        return;
+    }
+
     const targetDate = new Date('2025-11-17T00:00:00+03:00'); // Moscow time
     const now = new Date();
     const difference = targetDate - now;
 
     if (difference <= 0) {
         // Timer has reached zero
-        document.getElementById('days').textContent = '00';
-        document.getElementById('hours').textContent = '00';
-        document.getElementById('minutes').textContent = '00';
-        document.getElementById('seconds').textContent = '00';
+        daysElement.textContent = '00';
+        hoursElement.textContent = '00';
+        minutesElement.textContent = '00';
+        secondsElement.textContent = '00';
 
         // Update labels for zero values
-        document.querySelectorAll('.timer-label')[0].textContent = 'дней';
-        document.querySelectorAll('.timer-label')[1].textContent = 'часов';
-        document.querySelectorAll('.timer-label')[2].textContent = 'минут';
-        document.querySelectorAll('.timer-label')[3].textContent = 'секунд';
+        if (timerLabels.length >= 4) {
+            timerLabels[0].textContent = 'дней';
+            timerLabels[1].textContent = 'часов';
+            timerLabels[2].textContent = 'минут';
+            timerLabels[3].textContent = 'секунд';
+        }
         return;
     }
 
@@ -213,17 +227,18 @@ function updateTimer() {
     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
     // Update display with leading zeros
-    document.getElementById('days').textContent = days.toString().padStart(2, '0');
-    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    daysElement.textContent = days.toString().padStart(2, '0');
+    hoursElement.textContent = hours.toString().padStart(2, '0');
+    minutesElement.textContent = minutes.toString().padStart(2, '0');
+    secondsElement.textContent = seconds.toString().padStart(2, '0');
 
     // Update labels with correct declension
-    const labels = document.querySelectorAll('.timer-label');
-    labels[0].textContent = getDeclension(days, ['день', 'дня', 'дней']);
-    labels[1].textContent = getDeclension(hours, ['час', 'часа', 'часов']);
-    labels[2].textContent = getDeclension(minutes, ['минута', 'минуты', 'минут']);
-    labels[3].textContent = getDeclension(seconds, ['секунда', 'секунды', 'секунд']);
+    if (timerLabels.length >= 4) {
+        timerLabels[0].textContent = getDeclension(days, ['день', 'дня', 'дней']);
+        timerLabels[1].textContent = getDeclension(hours, ['час', 'часа', 'часов']);
+        timerLabels[2].textContent = getDeclension(minutes, ['минута', 'минуты', 'минут']);
+        timerLabels[3].textContent = getDeclension(seconds, ['секунда', 'секунды', 'секунд']);
+    }
 }
 
 // Update timer every second

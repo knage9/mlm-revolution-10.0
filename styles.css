@@ -1472,13 +1472,18 @@ body {
     margin: 0 auto;
 }
 
-    /* Show burger menu and hide regular nav on mobile */
+/* Show burger menu and hide regular nav on mobile */
     .nav {
         display: none;
     }
 
     .burger-menu {
         display: block;
+    }
+
+    /* Ensure burger menu is properly positioned on mobile */
+    .header-right {
+        position: relative;
     }
 
 }
