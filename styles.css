@@ -1120,31 +1120,19 @@ body {
     .btn-black {
         width: 100%;
         max-width: 500px;
-        height: 55px;
+        height: 60px;
         font-size: 18px;
     }
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 480px) {
     .btn-black {
-        height: 50px;
+        height: 55px;
         font-size: 16px;
     }
 }
 
-@media (max-width: 480px) {
-    .btn-black {
-        height: 45px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 360px) {
-    .btn-black {
-        height: 40px;
-        font-size: 12px;
-    }
-}
 
 /* Responsive Design */
 @media (max-width: 1440px) {
@@ -3684,17 +3672,6 @@ body {
     overflow: hidden;
 }
 
-.gift-title-bg{
-    background-color: #ff6b4a;
-    font-size: 54px;
-    padding: 5px 10px;
-    border-radius: 10px;
-    background: radial-gradient(ellipse at top left, #ffb6b9 0%, #fb8076 80%, #fdd49b 100%);
-    box-shadow: 0 4px 24px 0 rgba(255, 136, 126, 0.18);
-    color: #fff;
-    border: none;
-}
-
 .gift-text-set{
     font-weight: 500;
   background: linear-gradient(90deg, #7c3aed 0%, #b23e7a 50%, #d86834 100%);
@@ -3874,7 +3851,7 @@ body {
 @media (max-width: 1000px) {
     .banner-container {
         width: 100%;
-        height: 400px;
+        height: 500px;
     }
 
     .banner-content {
@@ -3917,7 +3894,7 @@ body {
 
 @media (max-width: 768px) {
     .banner-container {
-        height: 350px;
+        height: 450px;
     }
 
     .banner-content {
@@ -3952,7 +3929,7 @@ body {
 
 @media (max-width: 600px) {
     .banner-container {
-        height: 320px;
+        height: 360px;
     }
 
     .banner-content {
@@ -3986,7 +3963,7 @@ body {
 
 @media (max-width: 480px) {
     .banner-container {
-        height: 280px;
+        height: 330px;
     }
 
     .banner-content {
@@ -3998,9 +3975,6 @@ body {
         margin-bottom: 8px;
     }
 
-    .banner-description {
-        font-size: 12px;
-    }
 
     .banner-mascot {
         width: 160px;
@@ -4013,14 +3987,14 @@ body {
     }
 
     .btn-registration {
-        height: 45px;
-        font-size: 14px;
+        height: 60px;
+        font-size: 18px;
     }
 }
 
 @media (max-width: 360px) {
     .banner-container {
-        height: 250px;
+        height: 290px;
     }
 
     .banner-content {
@@ -4032,9 +4006,7 @@ body {
         margin-bottom: 6px;
     }
 
-    .banner-description {
-        font-size: 11px;
-    }
+
 
     .banner-mascot {
         width: 140px;
@@ -4047,8 +4019,8 @@ body {
     }
 
     .btn-registration {
-        height: 40px;
-        font-size: 12px;
+        height: 50px;
+        font-size: 16px;
     }
 }
 
@@ -5017,13 +4989,14 @@ body {
     .organizer-description {
         font-size: 18px;
         max-width: 100%;
+        margin-bottom: 20px;
     }
 
     .organizer-profile {
         flex-direction: column;
         text-align: center;
         gap: 25px;
-        margin-bottom: 35px;
+        margin-bottom: 0px;
     }
 
     .organizer-photo {
@@ -5657,4 +5630,8 @@ body {
         font-size: 12px;
         padding: 5px 6px;
     }
+}
+
+.container-btn{
+    padding: 0px 20px;
 }

@@ -671,4 +671,29 @@ function initRegistrationButtons() {
             });
         }
     });
+
+    // Handle floating buttons "Купить записи" - scroll to pricing section
+    const buyRecordsBtns = document.querySelectorAll('.floating-buttons .btn-secondary');
+    buyRecordsBtns.forEach(btn => {
+        if (btn.textContent.includes('Купить записи')) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                // Find the pricing section
+                const pricingSection = document.querySelector('.pricing-section');
+                if (pricingSection) {
+                    // Calculate offset for header height (approximately 80px)
+                    const headerOffset = 80;
+                    const elementPosition = pricingSection.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    // Smooth scroll to pricing section
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        }
+    });
 }
