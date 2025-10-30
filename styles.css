@@ -3662,7 +3662,7 @@ body {
 
 .banner-container {
     max-width: 100%;
-    height: 500px;
+    height: auto;
     background-image: url('img/bg_2.png');
     background-size: cover;
     background-position: center;
@@ -3694,7 +3694,8 @@ body {
 .banner-text {
     flex: 1;
     max-width: 720px;
-    padding: 20px 0;
+    padding: 40px 0;
+    text-align: center;
 }
 
 .banner-title {
@@ -3704,8 +3705,10 @@ body {
     line-height: 135%;
     letter-spacing: -0.05em;
     color: #2F2D2E;
-    margin: 0 0 20px 0;
-    padding: 0;
+    max-width: 1000px;
+    text-align: center;
+    margin: 40px auto;
+    margin-bottom: 0px;
 }
 
 .banner-description {
@@ -3719,11 +3722,15 @@ body {
     background-color: rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.1);
     color: black;
-    padding: 10px 20px;
+    padding: 20px 20px;
     font-size: 28px;
     border-radius: 10px;
     width: 100%;
     line-height: 130%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
 }
 
 .banner-mascot {
@@ -3797,7 +3804,7 @@ body {
 @media (max-width: 1440px) {
     .banner-container {
         width: 1200px;
-        height: 480px;
+        height: auto;
     }
 
     .banner-title {
@@ -3823,7 +3830,7 @@ body {
 @media (max-width: 1200px) {
     .banner-container {
         width: 1000px;
-        height: 420px;
+        height: auto;
     }
 
     .banner-title {
@@ -3851,24 +3858,21 @@ body {
 @media (max-width: 1000px) {
     .banner-container {
         width: 100%;
-        height: 500px;
+        height: auto;
     }
 
     .banner-content {
         flex-direction: column;
-        align-items: flex-start;
-        
-        padding: 30px;
-        gap: 20px;
+        align-items: center;
     }
 
     .banner-text {
         max-width: 100%;
+        padding: 20px 0px;
     }
 
     .banner-title {
-        font-size: 32px;
-        margin-bottom: 15px;
+        margin: 20px auto;
     }
 
     .banner-description {
@@ -3888,22 +3892,20 @@ body {
         width: 300px;
         height: 300px;
         position: absolute;
-        bottom: -50px;
     }
 }
 
 @media (max-width: 768px) {
     .banner-container {
-        height: 450px;
-    }
-
-    .banner-content {
-        padding: 25px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .banner-title {
         font-size: 28px;
-        margin-bottom: 12px;
+        margin: 20px 40px;
     }
 
     .banner-description {
@@ -3918,7 +3920,6 @@ body {
     .mascot-banner-img {
         width: 250px;
         height: 250px;
-        bottom: -25px;
     }
 
     .btn-registration {
@@ -3929,16 +3930,10 @@ body {
 
 @media (max-width: 600px) {
     .banner-container {
-        height: 360px;
+        height: auto;
     }
-
-    .banner-content {
-        padding: 20px;
-    }
-
     .banner-title {
         font-size: 24px;
-        margin-bottom: 10px;
     }
 
     .banner-description {
@@ -3963,16 +3958,11 @@ body {
 
 @media (max-width: 480px) {
     .banner-container {
-        height: 330px;
-    }
-
-    .banner-content {
-        padding: 15px;
+        height: auto;
     }
 
     .banner-title {
         font-size: 20px;
-        margin-bottom: 8px;
     }
 
 
@@ -3994,16 +3984,11 @@ body {
 
 @media (max-width: 360px) {
     .banner-container {
-        height: 290px;
-    }
-
-    .banner-content {
-        padding: 12px;
+        height: auto;
     }
 
     .banner-title {
         font-size: 18px;
-        margin-bottom: 6px;
     }
 
 
