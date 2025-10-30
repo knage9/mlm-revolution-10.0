@@ -469,7 +469,7 @@ body {
 
 .nav-link {
     font-family: 'Inter', sans-serif;
-    font-weight: 800;
+    font-weight: 500;
     font-size: 20px;
     color: #2F2D2E;
     text-decoration: none;
@@ -926,7 +926,7 @@ body {
 .card-number {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    font-size: 42px;
+    font-size: 56px;
     line-height: 1.2;
     letter-spacing: -0.04em;
     color: #FF7C5C;
@@ -954,8 +954,8 @@ body {
 }
 
 .network-icon {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
 }
 
@@ -4064,6 +4064,7 @@ body {
     border-radius: 10px;
     padding: 30px;
     box-sizing: border-box;
+    margin-top: 30px;
 }
 
 .date-text {
@@ -5260,6 +5261,12 @@ body {
 
 .h2-title-price {
     margin-top: 20px;
+    font-size: 32px;
+    background: linear-gradient(90deg, #7c3aed 0%, #b23e7a 50%, #d86834 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 .platunum-btn{
