@@ -640,18 +640,19 @@ function initTestimonialsSlider() {
 // Registration button functionality
 function initRegistrationButtons() {
     // Handle "Участвовать бесплатно" buttons
-    const freeParticipationBtns = document.querySelectorAll('.btn-black, .btn-primary');
+    const freeParticipationBtns = document.querySelectorAll('.btn-registration');
     freeParticipationBtns.forEach(btn => {
-        if (btn.textContent.includes('Участвовать бесплатно')) {
+        if (btn.textContent.includes('Забрать бонус')) {
             btn.addEventListener('click', function(e) {
                 e.preventDefault();
                 window.location.href = 'registration.html';
             });
         }
     });
+    
 
     // Handle "Регистрация" and "Зарегистрироваться" buttons
-    const registrationBtns = document.querySelectorAll('.nav-link, .btn-registration');
+    const registrationBtns = document.querySelectorAll('.nav-link, .btn-black');
     registrationBtns.forEach(btn => {
         if (btn.textContent.includes('Регистрация') || btn.textContent.includes('Зарегистрироваться')) {
             btn.addEventListener('click', function(e) {
@@ -662,7 +663,7 @@ function initRegistrationButtons() {
     });
 
     // Handle floating buttons "Участвовать бесплатно"
-    const floatingBtns = document.querySelectorAll('.floating-buttons .btn-primary');
+    const floatingBtns = document.querySelectorAll('.floating-buttons .btn-primary, .btn-black');
     floatingBtns.forEach(btn => {
         if (btn.textContent.includes('Участвовать бесплатно')) {
             btn.addEventListener('click', function(e) {
