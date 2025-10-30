@@ -4025,6 +4025,10 @@ body {
     text-align: center;
 }
 
+.h2-title-price{
+    font-size: 32px;
+}
+
 .program-description {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -4039,6 +4043,8 @@ body {
 }
 
 .program-date-container {
+    max-width: 1000px;
+    margin: 0 auto;
     width: 100%;
     margin-bottom: 20px;
 }
@@ -4077,6 +4083,9 @@ body {
     justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(10px);
+    max-width: 1000px;
+    margin: 0px auto;
+    width: 100%;
 }
 
 .speaker-info {
@@ -5246,12 +5255,6 @@ body {
 
 .h2-title-price {
     margin-top: 20px;
-    font-size: 32px;
-    background: linear-gradient(90deg, #7c3aed 0%, #b23e7a 50%, #d86834 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
 }
 
 .platunum-btn{
@@ -5517,6 +5520,9 @@ body {
         font-size: 15px;
         padding: 10px 12px;
     }
+    .container{
+        padding-top: 0px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -5626,4 +5632,12 @@ body {
 
 .container-btn{
     padding: 0px 20px;
+}
+
+.txt-area{
+    background: linear-gradient(90deg, #7c3aed 0%, #b23e7a 50%, #d86834 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
