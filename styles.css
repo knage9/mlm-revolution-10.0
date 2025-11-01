@@ -5548,6 +5548,9 @@ body {
     .container{
         padding-top: 0px;
     }
+    .hero-section, .registration-main{
+        padding-top: 100px;
+    }
 }
 
 @media (max-width: 600px) {

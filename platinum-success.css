@@ -398,6 +398,9 @@
     .email-subtext {
         font-size: 13px;
     }
+    .success-container{
+        margin-top: 150px;
+    }
 }
 
 @media (max-width: 600px) {

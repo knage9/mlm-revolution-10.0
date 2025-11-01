@@ -465,6 +465,9 @@
     .info-subtext {
         font-size: 14px;
     }
+    .thank-you-container{
+        margin-top: 150px;
+    }
 }
 
 @media (max-width: 600px) {
