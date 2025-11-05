@@ -2000,7 +2000,7 @@ body {
 
 /* Footer */
 .footer {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .footer-content {
@@ -2053,6 +2053,45 @@ body {
     opacity: 0.7;
 }
 
+/* Developer Plaque */
+.developer-plaque {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.plaque-content {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    text-align: center;
+
+}
+
+.plaque-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: #2F2D2E;
+    margin: 0;
+}
+
+.plaque-link {
+    color: #FF7C5C;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.plaque-link:hover {
+    opacity: 0.7;
+}
+
+.img-artemlobov{
+    width: 40px;
+}
 /* FAQ and Footer Responsive */
 @media (max-width: 1440px) {
     .faq-title {
