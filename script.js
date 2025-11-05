@@ -446,35 +446,43 @@ function initFloatingButtonsScroll() {
 
     let lastScrollTop = 0;
     let scrollTimeout;
-    let isScrollingDown = false;
+    let isScrolling = false;
+
+    // Show buttons by default when page loads and has scrolled past initial position
+    function showButtons() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > 100) { // Show when scrolled down more than 100px
+            floatingButtons.classList.add('visible');
+        } else {
+            floatingButtons.classList.remove('visible');
+        }
+    }
+
+    // Initial check
+    showButtons();
 
     function handleScroll() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        isScrolling = true;
 
         // Clear the previous timeout
         if (scrollTimeout) {
             clearTimeout(scrollTimeout);
         }
 
-        // Determine scroll direction
-        if (scrollTop > lastScrollTop) {
-            // Scrolling down
-            if (!isScrollingDown && scrollTop > 50) {
-                isScrollingDown = true;
-                floatingButtons.classList.add('visible');
-            }
-        } else {
-            // Scrolling up
-            isScrollingDown = false;
+        // Show buttons immediately when scrolling
+        if (scrollTop > 100) {
+            floatingButtons.classList.add('visible');
         }
 
         // Set a timeout to hide buttons when scrolling stops
         scrollTimeout = setTimeout(() => {
-            if (scrollTop > 50) {
+            isScrolling = false;
+            // Hide buttons after scrolling stops, but only if not at the very top
+            if (scrollTop > 100) {
                 floatingButtons.classList.remove('visible');
-                isScrollingDown = false;
             }
-        }, 1500); // Hide after 1.5 seconds of no scrolling
+        }, 1000); // Hide after 3 seconds of no scrolling
 
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     }
