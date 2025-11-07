@@ -3631,7 +3631,7 @@ body {
 
     .speaker-content {
         padding: 18px;
-        gap: 18px;
+        gap: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -3720,6 +3720,24 @@ body {
 
     .speaker-description {
         font-size: 12px;
+    }
+}
+
+/* Force speakers section visibility on mobile devices */
+@media (max-width: 768px) {
+    .speakers-section,
+    .speakers-section * {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .speakers-section.animate-on-scroll,
+    .speakers-section .animate-on-scroll,
+    .speakers-section .animate-fade-left,
+    .speakers-section .animate-fade-right,
+    .speakers-section .animate-scale {
+        opacity: 1 !important;
+        transform: none !important;
     }
 }
 
