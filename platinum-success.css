@@ -100,9 +100,13 @@
     text-align: center;
 }
 
-.info-block {
-    margin-bottom: 35px;
+.txt-badge-tariff{
+    font-size: 20px;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+    line-height: 120%;
 }
+
 
 .info-title {
     font-family: 'Inter', sans-serif;
@@ -131,7 +135,7 @@
 .success-button-container {
     display: flex;
     justify-content: center;
-    margin: 30px 0;
+    margin-top: 30px;
 }
 
 .success-button {
@@ -400,6 +404,9 @@
     }
     .success-container{
         margin-top: 150px;
+    }
+    .success-button-container{
+        margin-top: 20px;
     }
 }
 
