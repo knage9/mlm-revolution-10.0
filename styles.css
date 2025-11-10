@@ -5358,6 +5358,259 @@ body {
     border: none;
 }
 
+/* Price Increase Section */
+.price-increase-section {
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.price-increase-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #2F2D2E;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.price-table-container {
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    padding: 40px;
+}
+
+.price-table {
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #2F2D2E;
+
+}
+
+.price-table th,
+.price-table td {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+.price-table th {
+    background-color: #FF7C5C;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.price-table td {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.price-table tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.price-table tr:hover td {
+    background-color: rgba(255, 124, 92, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+/* Price Increase Section Responsive */
+@media (max-width: 1440px) {
+    .price-increase-title {
+        font-size: 44px;
+    }
+
+    .price-table-container {
+        max-width: 900px;
+        padding: 35px;
+    }
+
+    .price-table th,
+    .price-table td {
+        padding: 18px;
+    }
+
+    .price-table th {
+        font-size: 18px;
+    }
+
+    .price-table {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .price-increase-title {
+        font-size: 40px;
+    }
+
+    .price-table-container {
+        max-width: 800px;
+        padding: 30px;
+    }
+
+    .price-table th,
+    .price-table td {
+        padding: 16px;
+    }
+
+    .price-table th {
+        font-size: 17px;
+    }
+
+    .price-table {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .price-increase-section {
+        margin-top: 80px;
+    }
+
+    .price-increase-title {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
+
+    .price-table-container {
+        max-width: 700px;
+        padding: 25px;
+    }
+
+    .price-table th,
+    .price-table td {
+        padding: 14px;
+    }
+
+    .price-table th {
+        font-size: 16px;
+    }
+
+    .price-table {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .price-increase-section {
+        margin-top: 60px;
+    }
+
+    .price-increase-title {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .price-table-container {
+        max-width: 600px;
+        padding: 20px;
+    }
+
+    .price-table th,
+    .price-table td {
+        padding: 12px;
+    }
+
+    .price-table th {
+        font-size: 15px;
+    }
+
+    .price-table {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 600px) {
+    .price-increase-section {
+        margin-top: 50px;
+    }
+
+    .price-increase-title {
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
+
+    .price-table-container {
+        max-width: 500px;
+        padding: 18px;
+    }
+
+    .price-table th,
+    .price-table td {
+        padding: 10px;
+    }
+
+    .price-table th {
+        font-size: 14px;
+    }
+
+    .price-table {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .price-increase-section {
+        margin-top: 40px;
+    }
+
+    .price-increase-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .price-table-container {
+        max-width: 450px;
+        padding: 15px;
+    }
+
+    .price-table th,
+    .price-table td {
+        padding: 8px;
+    }
+
+    .price-table th {
+        font-size: 13px;
+    }
+
+    .price-table {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 360px) {
+    .price-increase-title {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .price-table-container {
+        max-width: 350px;
+        padding: 12px;
+    }
+
+    .price-table th,
+    .price-table td {
+        padding: 6px;
+    }
+
+    .price-table th {
+        font-size: 12px;
+    }
+
+    .price-table {
+        font-size: 10px;
+    }
+}
+
 /* Registration Page Styles */
 .registration-main {
     margin-top: 100px;
