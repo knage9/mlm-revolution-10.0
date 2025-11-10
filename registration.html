@@ -91,6 +91,26 @@
         </footer>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const utmSource = localStorage.getItem('utm_source') || '';
+        const utmMedium = localStorage.getItem('utm_medium') || '';
+        const utmCampaign = localStorage.getItem('utm_campaign') || '';
+        const iframe = document.getElementById('prod_form') 
+            || document.querySelector('.registration-form-container iframe')
+            || document.querySelector('iframe'); // запасной вариант
+
+        if (iframe) {
+            const baseSrc = iframe.src.split('?')[0];
+            const params = [];
+            if (utmSource) params.push(`utm_source=${encodeURIComponent(utmSource)}`);
+            if (utmMedium) params.push(`utm_medium=${encodeURIComponent(utmMedium)}`);
+            if (utmCampaign) params.push(`utm_campaign=${encodeURIComponent(utmCampaign)}`);
+            iframe.src = params.length ? `${baseSrc}?${params.join('&')}` : baseSrc;
+        }
+        });
+    </script>
+
     <script src="script.js"></script>
 </body>
 </html>

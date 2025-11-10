@@ -10,7 +10,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<script>
+  function getParameterByName(name) {
+    const url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+    const results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  ['utm_source', 'utm_medium', 'utm_campaign'].forEach(param => {
+    const value = getParameterByName(param);
+    if (value) {
+      localStorage.setItem(param, value);
+      console.log('Сохранено:', param, value); // Для отладки
+    } else {
+      console.log('Не найден:', param);
+    }
+  });
+</script>
+
     <div class="container">
         <!-- Header -->
         <header class="header">
@@ -673,6 +694,22 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="speaker-card animate-scale animate-delay-2">
+                        <div class="speaker-content">
+                            <img src="img/speaker/Алиса-Кузьминых.png" alt="Спикер 5" class="speaker-image">
+                            <div class="speaker-info">
+                                <h3 class="speaker-name">Алиса Кузьминых</h3>
+                                <div class="card-description-speaker">
+                                    <ul class="description-list-speaker">
+                                        <li>ТОП-лидер сетевой компании</li>
+                                        <li>Лучший результат в доходах за год - 100 000$</li>
+                                        <li>Создатель своей онлайн школы «СТРАХИ ПРОДАЖИ»</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -854,7 +891,7 @@
                 <div class="speaker-slot animate-fade-left animate-delay-1">
                     <div class="speaker-info">
                         <div class="speaker-name name_2">Алиса Кузьминых</div>
-                        <div class="speaker-topic">Тема уточняется</div>
+                        <div class="speaker-topic">Активация новичка за 3 месяца. Как закрыть лидерскую квалификацию и вырастить лидера в сетевом</div>
                     </div>
                     <div class="speaker-time">16:00 — 16:55</div>
                 </div>
